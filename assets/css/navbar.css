@@ -1,0 +1,313 @@
+/* ==================================== INITIAL SETUP ==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Ubuntu:wght@700&display=swap');
+
+:root {
+  --black: #000;
+  --blue: #2d9cdb;
+  --blue-light: #ecfbf9;
+  --blue-dark-100: #252946;
+  --blue-dark-80: #525872;
+  --card-bg: #fffcfc;
+  --grey-20: #c0c8ca;
+  --grey-40: #9aa6a9;
+  --grey-60: #758387;
+  --grey-80: #516064;
+  --grey-100: #2e3c40;
+  --primary-bg: #fafafa;
+  --primary-color: #ee6a51;
+  --red-20: #ffe2e6;
+  --red-100: #ee6a51;
+  --red-dark: #e44c30;
+  --sand-brown-60: #ffdea9;
+  --secondary-bg: #373737;
+  --white: #fff;
+  --white-2: #fafafa;
+}
+
+* {
+  color: var(--grey-100);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary-bg);
+  z-index: -5;
+  height: 100vh;
+}
+
+/* ====================================== SCROLLBAR ====================================== */
+body::-webkit-scrollbar {
+  background-color: var(--white-2);
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+/* ===================================== NAVIGATION ===================================== */
+/* ================================ UNIVERSAL ================================ */
+nav {
+  background: var(--primary-bg);
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  left: 0;
+  padding: 15px 100px;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  z-index: 99;
+}
+
+nav.fixed {
+  -webkit-animation: show 0.3s;
+  animation: show 0.3s;
+  position: fixed !important;
+}
+
+/* ======================= ANIMATION ======================= */
+@-webkit-keyframes show {
+  0% {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes show {
+  0% {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* ================================== LOGO ================================== */
+nav .logo {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--grey-100);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+nav .logo .logo-icon {
+  height: 40px;
+  margin-right: 22px;
+}
+
+nav .logo .logo-icon img {
+  height: 100%;
+}
+
+nav .logo span {
+  font-size: 2rem;
+}
+
+/* ================================ BURGER IC ================================ */
+nav .show {
+  background: var(--grey-100);
+  cursor: pointer;
+  float: right;
+  height: 5px;
+  position: relative;
+  margin-top: 25px;
+  width: 30px;
+}
+
+nav .show:before,
+nav .show:after {
+  background: var(--grey-100);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+}
+
+nav .show:before {
+  top: -12px;
+  width: 100%;
+}
+
+nav .show:after {
+  top: 12px;
+  width: 100%;
+}
+
+nav .show.black,
+nav .show.black:before,
+nav .show.black:after {
+  background: var(--grey-100);
+}
+
+/* ================================ NAV  ITEM ================================ */
+nav ul,
+nav ul div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul div li {
+  line-height: 35px;
+  list-style: none;
+  margin-left: 18px;
+}
+
+nav ul div li a {
+  color: var(--grey-80);
+  display: inline-block;
+  font-size: 18px;
+  font-size: 1.125rem;
+  padding: 0 5px;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav ul div li a.active {
+  font-weight: 450;
+}
+
+nav ul div li a:hover,
+nav ul div li a.active {
+  color: var(--primary-color);
+}
+
+nav ul .hide {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+nav ul .hide.black {
+  color: var(--grey-100);
+}
+
+/* ================================ HIDE SHOW ================================ */
+nav .show,
+nav ul .hide {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+}
+
+/* ===================================== RESPONSIVE ===================================== */
+/* ================================= TABLET ================================= */
+@media screen and (max-width: 768px) {
+  /* ======================= UNIVERSAL ======================= */
+  nav {
+    padding: 10px 50px;
+  }
+
+  /* ========================= LOGO ========================= */
+  nav .logo {
+    line-height: 60px;
+  }
+
+  /* ======================= NAV  ITEM ======================= */
+  nav ul {
+    background: var(--sand-brown-60);
+    display: block;
+    height: 100vh;
+    line-height: normal;
+    padding: 20px 0;
+    position: fixed;
+    right: -100%;
+    text-align: center;
+    top: 0;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    width: 100%;
+    z-index: 999;
+  }
+
+  nav ul.primary {
+    background: var(--sand-brown-60);
+  }
+
+  nav ul div {
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-52.5%, -80%);
+    transform: translate(-52.5%, -80%);
+    width: 100%;
+  }
+
+  nav ul div li {
+    margin-top: 10vh;
+  }
+
+  nav ul div li a {
+    font-size: 2rem;
+  }
+
+  nav ul .hide {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+
+  /* ======================= HIDE SHOW ======================= */
+  nav .show,
+  nav ul .hide {
+    display: block;
+  }
+}
+
+/* ================================= MOBILE ================================= */
+@media screen and (max-width: 426px) {
+  /* ======================= UNIVERSAL ======================= */
+  nav {
+    padding: 10px 20px;
+  }
+
+  /* ========================= LOGO ========================= */
+  nav .logo {
+    font-size: 1.5rem;
+  }
+
+  /* ======================= BURGER IC ======================= */
+  nav .show {
+    height: 3px;
+  }
+
+  nav .show:before {
+    top: -10px;
+  }
+
+  nav .show:after {
+    top: 10px;
+  }
+
+  /* ======================= NAV  ITEM ======================= */
+  nav ul div li a {
+    font-size: 2rem;
+  }
+}
