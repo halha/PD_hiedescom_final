@@ -1,0 +1,173 @@
+body {
+  overflow-x: hidden;
+  min-height: auto;
+}
+
+section {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 100px 70px 50px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 35%;
+  background: var(--white);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 32px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box .top {
+  position: relative;
+  text-align: center;
+  padding-bottom: 17px;
+  margin-bottom: 24px;
+}
+
+.box .top::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: var(--grey);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.box .top a {
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.box .top h2 {
+  font-size: 2rem;
+}
+
+.box .user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.box .user .img-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 23px;
+}
+
+.box .user .img-box img {
+  width: 100%;
+}
+
+.box .user h3 {
+  font-size: 1.5rem;
+}
+
+.box form > div {
+  width: 100%;
+  height: 183px;
+  border: 2px dashed var(--grey-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.box form > div .upload label {
+  background: var(--yellow);
+  border-radius: 10px;
+  padding: 9px 17px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box form > div .upload label:hover {
+  opacity: 0.8;
+}
+
+.box form > div .upload input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.box input {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.box input.title {
+  font-size: 1.5rem;
+}
+
+.box input.url {
+  font-size: 1.2rem;
+}
+
+.box textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.box textarea.question {
+  font-size: 1rem;
+}
+
+.box button.button {
+  width: 100%;
+  border: none;
+  color: var(--white) !important;
+  background: var(--green-dark);
+  cursor: pointer;
+  outline: none;
+}
+
+/* ===================================== RESPONSIVE ===================================== */
+/* ================================= TABLET ================================= */
+@media screen and (max-width: 768px) {
+  .box {
+    width: 70%;
+  }
+}
+
+/* ================================= MOBILE ================================= */
+@media screen and (max-width: 426px) {
+  section {
+    padding: 100px 20px 50px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .box .top h2 {
+    font-size: 1.5rem;
+  }
+
+  .box .user h3 {
+    font-size: 1.2rem;
+  }
+}
