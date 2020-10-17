@@ -54,6 +54,7 @@ p.desc {
   line-height: 120%;
   text-align: center;
   letter-spacing: 0.04em;
+  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
@@ -71,18 +72,24 @@ p.desc {
 }
 
 #sec1.container .content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 #sec1.container .content > div > img {
   height: 90px;
+  margin: 8px 0 0 0;
   margin: 0.5rem 0 0 0;
   pointer-events: none;
   width: 90px;
 }
 
 #sec1.container .content > p {
+  padding: 16px auto;
   padding: 1rem auto;
   /* font-family: Roboto; */
   font-style: normal;
@@ -93,6 +100,7 @@ p.desc {
 }
 
 #sec1.container .content > div > a {
+  margin: 16px 0 0 0;
   margin: 1rem 0 0 0;
   padding: 10px;
   width: 48%;
@@ -108,6 +116,12 @@ p.desc {
 
 #sec1.container .content > div > .about {
   background-color: #ffba00;
+}
+
+#sec1.container .content > div > .login:hover,
+#sec1.container .content > div > .about:hover {
+  opacity: 0.7 !important;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
 }
 
 /* ======================= ANIMATION ======================= */
@@ -162,6 +176,8 @@ p.desc {
 
 #sec1.container .bg1:after {
   content: '';
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncA type="table" tableValues="0 0.7" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: opacity(0.7);
   filter: opacity(0.7);
   height: 100%;
   left: 0;
@@ -212,8 +228,13 @@ p.desc {
 #sec3.container .content {
   width: 65%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -237,17 +258,26 @@ p.desc {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   z-index: 2;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 #sec3.container .content .card:hover .icon {
+  -webkit-transform: translate(-50%, -100%);
   transform: translate(-50%, -100%);
 }
 
@@ -255,11 +285,13 @@ p.desc {
   position: absolute;
   left: 50%;
   bottom: 20px;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 90%;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
+  font-size: 30.4px;
   font-size: 1.9rem;
 }
 
@@ -268,7 +300,7 @@ p.desc {
   position: relative;
 }
 
-.bg-mix::before {
+.bg-mix:before {
   content: '';
   position: absolute;
   width: 100%;
@@ -306,10 +338,12 @@ p.desc {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   padding: 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 #sec4.container .card-box .card:hover {
+  -webkit-transform: translateY(-30px);
   transform: translateY(-30px);
 }
 
@@ -327,12 +361,15 @@ p.desc {
 
 #sec4.container .card-box .card h3 {
   font-size: 24px;
+  font-size: 24px;
   font-size: 1.5rem;
   text-align: center;
 }
 
 #sec4.container .card-box .card p {
   background: var(--yellow);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
   margin: 10px auto;
@@ -341,6 +378,7 @@ p.desc {
   border-radius: 10px;
   font-weight: 400;
   font-size: 18px;
+  font-size: 19.2px;
   font-size: 1.2rem;
   color: var(--white);
 }
@@ -384,6 +422,8 @@ p.desc {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -578,6 +618,7 @@ main .bg-outer.bg-3 {
   }
 
   #sec1.container > .content > div:nth-child(3) {
+    -ms-flex-flow: column;
     flex-flow: column;
   }
 
@@ -595,6 +636,8 @@ main .bg-outer.bg-3 {
 
   #sec3.container .content {
     width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -648,8 +691,14 @@ main .bg-outer.bg-3 {
   }
 
   #sec5.container .content .share-container .share {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 53px;
     width: 35%;

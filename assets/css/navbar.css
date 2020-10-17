@@ -1,5 +1,5 @@
 /* ==================================== INITIAL SETUP ==================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
   --black: #000;
@@ -30,7 +30,7 @@
 
 * {
   color: var(--grey-100);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -55,10 +55,12 @@ h6 {
 .button {
   border-radius: 100px;
   display: block;
+  font-size: 16px;
   font-size: 1rem;
   padding: 12px 4px;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -114,6 +116,7 @@ h6 {
 
 .button.filled:hover {
   opacity: 0.8;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
 }
 
 /* ====================================== SCROLLBAR ====================================== */
@@ -129,6 +132,8 @@ body::-webkit-scrollbar-thumb {
 /* ===================================== NAVIGATION ===================================== */
 /* ================================ UNIVERSAL ================================ */
 nav {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: var(--white);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
@@ -137,11 +142,14 @@ nav {
   display: -ms-flexbox;
   display: flex;
   height: 80px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   left: 0;
   padding: 15px 70px;
   position: fixed;
   top: 0;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 100%;
   z-index: 98;
@@ -156,6 +164,7 @@ nav.fixed {
 
 nav > img {
   height: 80px;
+  margin-left: -72px;
   margin-left: -4.5rem;
 }
 
@@ -207,6 +216,7 @@ nav .logo .logo-icon img {
 }
 
 nav .logo span {
+  font-size: 32px;
   font-size: 2rem;
 }
 
@@ -252,6 +262,8 @@ nav ul div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -272,6 +284,7 @@ nav ul div li {
 nav ul div li a {
   text-decoration: none;
   font-weight: 500;
+  font-size: 17.6px;
   font-size: 1.1rem;
 }
 
@@ -288,17 +301,26 @@ nav ul div li.search input {
   box-sizing: border-box;
   padding: 13px 21px;
   border-radius: 100px;
+  font-size: 16px;
   font-size: 1rem;
 }
 
 nav ul div li.nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 nav ul div li.nav-items a {
   margin-right: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -309,7 +331,11 @@ nav ul div li.nav-items a:hover svg {
 nav ul div li.mo-hide {
   position: relative;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -355,6 +381,7 @@ nav ul div li.mo-hide .option a.button.blue-light {
 
 nav ul div li.mo-hide .option a.button.blue-light:hover {
   opacity: 0.7;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
 }
 
 nav ul div li.pc-hide {
@@ -366,6 +393,7 @@ nav ul .bg {
 }
 
 nav ul .hide {
+  font-size: 40px;
   font-size: 40px;
   font-size: 2.5rem;
 }
@@ -440,9 +468,16 @@ nav ul .hide {
   }
 
   nav ul > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-flow: column;
     flex-flow: column;
     width: 100%;
     /* height: 100vh; */
@@ -457,7 +492,10 @@ nav ul .hide {
   nav ul div li.nav-items {
     width: 60%;
     margin: 41px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 

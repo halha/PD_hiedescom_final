@@ -20,12 +20,42 @@ footer .top {
   justify-content: center;
 }
 
-footer .top .left,
+footer .top .left {
+  width: 60%;
+  margin-bottom: 30px;
+}
+
 footer .top .right {
-  width: 50%;
+  width: 40%;
 }
 
 /* ======================= TOP  LEFT ======================= */
+footer .top .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+footer .top .left > div {
+  width: 40%;
+}
+
+footer .top .left > div:last-child {
+  width: 60%;
+}
+
+footer .top .left > div:last-child p {
+  width: 90%;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
 footer .top .left .logo {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -33,12 +63,13 @@ footer .top .left .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-decoration: none;
 }
 
 footer .top .left .logo img {
   box-shadow: 0px 20px 26px -15px rgba(0, 0, 0, 0.3);
+  height: 44px;
   height: 44px;
   height: 2.75rem;
   margin-right: 22px;
@@ -48,12 +79,14 @@ footer .top .left .logo img {
 footer .top .left .logo h3 {
   color: var(--blue-dark-100);
   font-size: 44px;
+  font-size: 44px;
   font-size: 2.75rem;
   font-weight: 800;
 }
 
 footer .top .left p {
   color: var(--blue-dark-80);
+  font-size: 14px;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -79,6 +112,7 @@ footer .top .right .column * {
 footer .top .right .column h3 {
   color: var(--blue-dark-100);
   font-size: 24px;
+  font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5;
@@ -87,9 +121,11 @@ footer .top .right .column h3 {
 footer .top .right .column a {
   color: var(--blue-dark-100);
   font-size: 24px;
+  font-size: 24px;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5;
+  text-decoration: none;
 }
 
 footer .top .right .column a.see {
@@ -98,7 +134,7 @@ footer .top .right .column a.see {
 }
 
 footer .top .right .column a:hover {
-  color: var(--primary-color);
+  color: var(--blue-light-2);
 }
 
 footer .top .right .column a:last-child {
@@ -113,6 +149,7 @@ footer .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 18px;
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 600;
@@ -154,6 +191,23 @@ footer .bottom span img {
   /* ========================== TOP ========================== */
   footer .top .left {
     width: 50%;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -ms-grid-row-align: start;
+    align-items: start;
+  }
+
+  footer .top .left > div {
+    width: 100% !important;
+  }
+
+  footer .top .left > div:first-child {
+    margin-bottom: 20px;
   }
 
   footer .top .right {
@@ -204,6 +258,7 @@ footer .bottom span img {
     justify-content: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   footer .top .right .column {

@@ -11,8 +11,14 @@ section {
   padding: 100px 70px 50px;
   position: relative;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -32,7 +38,7 @@ section {
   margin-bottom: 24px;
 }
 
-.box .top::after {
+.box .top:after {
   content: '';
   width: 100%;
   height: 1px;
@@ -47,15 +53,21 @@ section {
   position: absolute;
   top: 45%;
   left: 10px;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .box .top h2 {
+  font-size: 32px;
   font-size: 2rem;
 }
 
 .box .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 24px;
 }
@@ -73,6 +85,7 @@ section {
 }
 
 .box .user h3 {
+  font-size: 24px;
   font-size: 1.5rem;
 }
 
@@ -80,8 +93,14 @@ section {
   width: 100%;
   height: 183px;
   border: 2px dashed var(--grey-40);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 25px;
 }
@@ -90,20 +109,24 @@ section {
   background: var(--yellow);
   border-radius: 10px;
   padding: 9px 17px;
+  font-size: 19.2px;
   font-size: 1.2rem;
   font-weight: 500;
   font-family: 'Ubuntu', sans-serif;
   color: var(--white);
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .box form > div .upload label:hover {
   opacity: 0.8;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
 }
 
 .box form > div .upload input {
   opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   position: absolute;
   z-index: -1;
 }
@@ -117,10 +140,12 @@ section {
 }
 
 .box input.title {
+  font-size: 24px;
   font-size: 1.5rem;
 }
 
 .box input.url {
+  font-size: 19.2px;
   font-size: 1.2rem;
 }
 
@@ -133,6 +158,7 @@ section {
 }
 
 .box textarea.question {
+  font-size: 16px;
   font-size: 1rem;
 }
 
