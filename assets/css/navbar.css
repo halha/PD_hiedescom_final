@@ -353,6 +353,10 @@ nav ul div li.mo-hide .option a.button.blue-light {
   margin-bottom: 15px;
 }
 
+nav ul div li.mo-hide .option a.button.blue-light:hover {
+  opacity: 0.7;
+}
+
 nav ul div li.pc-hide {
   display: none;
 }

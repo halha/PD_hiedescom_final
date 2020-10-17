@@ -329,6 +329,11 @@
   height: 200px;
 }
 
+#sec1.container .left .material .bottom > .img-box img {
+  width: 100%;
+  height: 100%;
+}
+
 #sec1.container .left .material .bottom .desc {
   padding-top: 30px;
 }
@@ -383,6 +388,11 @@
   background: var(--grey);
   overflow: hidden;
   width: 100%;
+}
+
+#sec1.container .left > div .bottom > .img-box img {
+  width: 100%;
+  height: 100%;
 }
 
 #sec1.container .left > div .bottom .desc {
