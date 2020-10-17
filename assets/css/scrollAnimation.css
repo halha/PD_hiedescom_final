@@ -32,6 +32,26 @@
   animation-delay: 1s;
 }
 
+.play.delay5 {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+}
+
+.play.delay6 {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.play.delay7 {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s;
+}
+
+.play.delay8 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
 .hidden {
   opacity: 0;
   -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';

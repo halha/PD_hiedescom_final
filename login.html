@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Socied</title>
     <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/scrollAnimation.css" />
     <link rel="stylesheet" href="assets/css/login.css" />
   </head>
   <body>
     <main>
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo play fadeIn">
         <div class="img-box">
           <img src="assets/img/logo.svg" />
         </div>
         <span>Socied</span>
       </a>
 
-      <form action="dashboard.html" onsubmit="submitForm(event)">
+      <form action="dashboard.html" onsubmit="submitForm(event)" class="play fadeIn delay1">
         <div class="input-box">
           <label for="email">Email</label>
           <input
@@ -43,11 +44,11 @@
       </form>
     </main>
 
-    <div class="bg-outer bg-1">
+    <div class="bg-outer bg-1 play fadeInDown delay2">
       <img src="assets/img/bg/deco_top_right_1.svg" />
     </div>
 
-    <div class="bg-outer bg-2">
+    <div class="bg-outer bg-2 play fadeInUp delay4">
       <img src="assets/img/bg/deco_bottom_left_1.svg" />
     </div>
 

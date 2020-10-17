@@ -95,7 +95,7 @@ p.desc {
 #sec1.container .content > div > a {
   margin: 1rem 0 0 0;
   padding: 10px;
-  width: 45%;
+  width: 48%;
   text-align: center;
   border-radius: 10px;
   color: white;
@@ -596,6 +596,10 @@ main .bg-outer.bg-3 {
   #sec3.container .content {
     width: 100%;
     justify-content: center;
+  }
+
+  #sec3.container .content .card {
+    margin-bottom: 50px !important;
   }
 
   #sec4.container .card-box {
