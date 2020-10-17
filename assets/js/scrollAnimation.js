@@ -1,19 +1,23 @@
 const callbackAnimate = () => {
   // ==================== Scroll Function ====================
   let onScroll = document.querySelectorAll('.onScroll');
-  let scroll =
-    (window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0) + window.innerHeight;
 
   onScroll.forEach((el, i) => {
-    const breakSec = el.offsetTop;
+    window.addEventListener('scroll', () => {
+      const breakSec = el.offsetTop;
+      let scroll =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
 
-    if (scroll > breakSec) {
-      el.classList.remove('hidden');
-      el.classList.add('play');
-    }
+      console.log(el);
+
+      if (scroll > breakSec) {
+        el.classList.remove('hidden');
+        el.classList.add('play');
+      }
+    });
   });
 
   // ==================== Counter  Scroll ====================
