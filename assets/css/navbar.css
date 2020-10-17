@@ -39,7 +39,6 @@ body {
   z-index: -5;
   min-height: 100vh;
   height: auto;
-  width: 100vw;
 }
 
 h1,
@@ -121,14 +120,11 @@ nav {
   display: -ms-flexbox;
   display: flex;
   height: 80px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   left: 0;
   padding: 15px 70px;
-  position: absolute;
+  position: fixed;
   top: 0;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 100%;
   z-index: 98;
@@ -358,6 +354,10 @@ nav ul .hide {
 /* ================================= TABLET ================================= */
 @media screen and (max-width: 768px) {
   /* ======================= UNIVERSAL ======================= */
+  body {
+    width: 100vw;
+  }
+
   nav {
     padding: 10px 50px;
   }
