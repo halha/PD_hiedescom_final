@@ -37,7 +37,9 @@
 body {
   background: var(--primary-bg);
   z-index: -5;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
 }
 
 h1,

@@ -707,17 +707,27 @@
 /* ================================= TABLET ================================= */
 @media screen and (max-width: 768px) {
   /* ======================= UNIVERSAL ======================= */
-  .container,
-  #sec4.container {
-    padding: 80px 50px 50px;
+  .container {
+    padding: 100px 50px 50px;
   }
 
-  h1.title {
-    font-size: 3.2rem;
+  #sec1.container .left {
+    width: 100%;
+  }
+  #sec1.container .right {
+    display: none;
   }
 
-  h2.title {
-    width: 75%;
+  #sec1.container .left .activity,
+  #sec1.container .left .quiz,
+  #sec1.container .left .material,
+  #sec1.container .left .question,
+  #sec1.container .left .profile {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 100vw;
   }
 }
 
@@ -726,7 +736,7 @@
   /* ======================= UNIVERSAL ======================= */
   .container,
   #sec4.container {
-    padding: 80px 35px 50px;
+    padding: 100px 35px 50px;
   }
 
   .button {
@@ -734,17 +744,62 @@
     padding: 14px 30px;
   }
 
-  h1.title {
-    font-size: 2.25rem;
+  h2 {
+    font-size: 1.5rem !important;
   }
 
-  h2.title {
-    font-size: 1.5rem;
-    padding: 20px 0;
-    width: 100%;
+  h3 {
+    font-size: 1.1rem !important;
   }
 
-  p.desc {
-    font-size: 1.125rem;
+  h4 {
+    font-size: 1.05rem !important;
+  }
+
+  a {
+    font-size: 0.95rem !important;
+  }
+
+  #sec1.container .left .profile {
+    padding: 20px;
+  }
+
+  #sec1.container .left .profile .top-p {
+    flex-flow: column;
+    margin-bottom: 30px;
+  }
+
+  #sec1.container .left .profile .top-p .img-box {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  #sec1.container .left .profile .top-p .data {
+    text-align: center;
+  }
+
+  #sec1.container .left .profile .top-p .data span.button {
+    margin: auto;
+  }
+
+  #sec1.container .left .profile .bottom-p {
+    flex-wrap: wrap;
+  }
+
+  #sec1.container .left .profile .bottom-p .post {
+    width: 45%;
+  }
+
+  #sec1.container .left .profile .bottom-p .post:nth-child(1),
+  #sec1.container .left .profile .bottom-p .post:nth-child(2) {
+    margin-bottom: 25px;
+  }
+
+  #sec1.container .left > div .top {
+    padding: 20px;
+  }
+
+  #sec1.container .left > div .bottom .rate .action > div p {
+    display: none;
   }
 }
