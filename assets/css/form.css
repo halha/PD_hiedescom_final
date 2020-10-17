@@ -145,6 +145,27 @@ section {
   outline: none;
 }
 
+.bg-outer {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-outer img {
+  width: 100%;
+}
+
+.bg-outer.bg-1 {
+  top: 0;
+  right: 0;
+  width: 20%;
+}
+
+.bg-outer.bg-2 {
+  bottom: 0;
+  left: 0;
+  width: 25%;
+}
+
 /* ===================================== RESPONSIVE ===================================== */
 /* ================================= TABLET ================================= */
 @media screen and (max-width: 768px) {
