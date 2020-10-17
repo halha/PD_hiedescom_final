@@ -804,15 +804,19 @@
   }
 
   h3 {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
   }
 
   h4 {
-    font-size: 1.05rem !important;
+    font-size: .8rem !important;
   }
 
   a {
-    font-size: 0.95rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  p{
+    font-size: 0.7rem !important;
   }
 
   #sec1.container .left .profile {
@@ -853,6 +857,27 @@
   #sec1.container .left > div .top {
     padding: 20px;
   }
+
+  #sec1.container .left>div .top span {
+    font-size: .5rem;
+    padding: 5px 10px !important;
+  }
+
+  #sec1.container .left>div .top .acc .img-box {
+      margin-right: 0px;
+  }
+
+  #sec1.container .left>div .bottom .desc,
+  #sec1.container .left>div .bottom .rate,
+  #sec1.container .left>div .bottom .comment {
+    padding: 5px 20px 10px;
+    margin: 0%;
+  }
+
+  #sec1.container .left>div .bottom .rate span{
+    font-size: .5rem;
+  }
+
 
   #sec1.container .left > div .bottom .rate .action > div p {
     display: none;
