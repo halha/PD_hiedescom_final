@@ -17,7 +17,7 @@ section {
 }
 
 .box {
-  width: 35%;
+  width: 50%;
   background: var(--white);
   border-radius: 10px;
   box-sizing: border-box;
@@ -146,7 +146,7 @@ section {
 }
 
 .bg-outer {
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 
