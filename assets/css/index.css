@@ -31,17 +31,30 @@ h2.title {
   font-size: 56px;
   line-height: 110%;
   text-align: center;
+  padding-bottom: 30px;
+}
+
+h2.title:after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: var(--blue-light-2);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 p.desc {
-font-family: 'Roboto', sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 120%;
-text-align: center;
-letter-spacing: 0.04em;
-margin-bottom: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
 }
 
 /* ====================================== SECTION 1 ====================================== */
@@ -57,19 +70,19 @@ margin-bottom: 1.5rem;
   display: block;
 }
 
-#sec1.container .content>div {
+#sec1.container .content > div {
   display: flex;
   justify-content: space-between;
 }
 
 #sec1.container .content > div > img {
   height: 90px;
-  margin: .5rem 0 0 0;
+  margin: 0.5rem 0 0 0;
   pointer-events: none;
   width: 90px;
 }
 
-#sec1.container .content>p{
+#sec1.container .content > p {
   padding: 1rem auto;
   /* font-family: Roboto; */
   font-style: normal;
@@ -79,7 +92,7 @@ margin-bottom: 1.5rem;
   color: #262626;
 }
 
-#sec1.container .content>div>a {
+#sec1.container .content > div > a {
   margin: 1rem 0 0 0;
   padding: 10px;
   width: 45%;
@@ -88,14 +101,13 @@ margin-bottom: 1.5rem;
   color: white;
 }
 
-#sec1.container .content>div>.login {
+#sec1.container .content > div > .login {
   background-color: var(--blue-light-2);
 }
 
-#sec1.container .content>div>.about {
-  background-color: #FFBA00;
+#sec1.container .content > div > .about {
+  background-color: #ffba00;
 }
-
 
 /* ======================= ANIMATION ======================= */
 @-webkit-keyframes up-down {
@@ -179,7 +191,91 @@ margin-bottom: 1.5rem;
   margin: auto;
 }
 
+.bg-mix-1 {
+  position: relative;
+}
+
+.bg-mix-1 .bg {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.bg-mix-1 .bg img {
+  width: 100%;
+}
+
+/* ====================================== SECTION 3 ====================================== */
+#sec3.container .content {
+  width: 65%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#sec3.container .content .card {
+  width: 209px;
+  height: 209px;
+  margin: 10px;
+  border: 5px solid var(--blue-light-2);
+  position: relative;
+}
+
+#sec3.container .content .card:nth-child(1),
+#sec3.container .content .card:nth-child(2),
+#sec3.container .content .card:nth-child(3) {
+  margin-bottom: 100px;
+}
+
+#sec3.container .content .card .icon {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: 0.5s;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+#sec3.container .content .card:hover .icon {
+  transform: translate(-50%, -100%);
+}
+
+#sec3.container .content .card p {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
 /* ====================================== SECTION 4 ====================================== */
+.bg-mix {
+  position: relative;
+}
+
+.bg-mix::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg);
+  z-index: -2;
+}
+
 #sec4.container {
   min-height: auto;
 }
@@ -190,7 +286,7 @@ margin-bottom: 1.5rem;
 
 /* =============================== S4  CARD =============================== */
 #sec4.container .card-box {
-  width: 90%;
+  width: 60%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,11 +300,21 @@ margin-bottom: 1.5rem;
   color: var(--dark-blue-100);
   text-decoration: none;
   width: 30%;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+#sec4.container .card-box .card:hover {
+  transform: translateY(-30px);
 }
 
 #sec4.container .card-box .card .img-box {
-  width: 250px;
-  height: 250px;
+  width: 180px;
+  height: 180px;
   margin: auto auto 40px;
   overflow: hidden;
   border-radius: 50%;
@@ -225,11 +331,95 @@ margin-bottom: 1.5rem;
 }
 
 #sec4.container .card-box .card p {
+  background: var(--yellow);
+  width: fit-content;
   text-align: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  padding: 6px 20px;
+  border-radius: 10px;
+  font-weight: 400;
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+/* ====================================== SECTION 5 ====================================== */
+#sec5.container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ============================== S5 CONTENT ============================== */
+#sec5.container .content p.desc {
+  color: var(--grey-80);
+  margin: auto auto 90px;
+  width: 70%;
+}
+
+#sec5.container .content .share-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: auto;
+  width: 55%;
+}
+
+#sec5.container .content .share-container .share {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 60px;
+}
+
+#sec5.container .content .share-container .share.ic-blue:hover svg {
+  fill: var(--facebook);
+}
+
+#sec5.container .content .share-container .share.ic-light-blue:hover svg {
+  fill: var(--teletweet);
+}
+
+#sec5.container .content .share-container .share.ic-green:hover svg {
+  fill: var(--whatsapp);
+}
+
+/* ============================ S5  BACKGROUND ============================ */
+#sec5.container .bg {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateY(5%);
+  transform: translateY(5%);
+  width: 25%;
+  z-index: -1;
+}
+
+#sec5.container .bg img {
+  pointer-events: none;
+  width: 100%;
 }
 
 /* ======================================= MAIN BG ======================================= */
@@ -237,32 +427,36 @@ main {
   position: relative;
 }
 
-main .bg-main {
+main .bg-outer {
   position: absolute;
   z-index: -1;
 }
 
-main .bg-main.bg-1 {
-  top: 27%;
+main .bg-outer img {
+  width: 100%;
+}
+
+main .bg-outer.bg-1 {
+  top: 0;
   right: 0;
   width: 15%;
 }
 
-main .bg-main.bg-2 {
-  top: 56%;
-  left: -2%;
-  width: 15%;
+main .bg-outer.bg-2 {
+  top: 30%;
+  left: 0;
+  width: 20%;
 }
 
-main .bg-main img {
+main .bg-outer.bg-3 {
   width: 100%;
-  pointer-events: none;
+  bottom: 0;
+  left: 0;
 }
 
 /* ===================================== RESPONSIVE ===================================== */
 /* ================================= TABLET ================================= */
 @media screen and (max-width: 768px) {
-
   /* ======================= UNIVERSAL ======================= */
   .container {
     padding: 80px 50px 50px;
@@ -281,12 +475,23 @@ main .bg-main img {
     width: 60%;
   }
 
-  #sec1.container .content>p {
+  #sec1.container .content > p {
     font-size: 35px;
   }
 
+  /* ======================= SECTION 2 ======================= */
   #sec2.container {
     min-height: auto;
+  }
+
+  /* ======================= SECTION 3 ======================= */
+  #sec3.container .content {
+    width: 80%;
+  }
+
+  /* ======================= SECTION 4 ======================= */
+  #sec4.container .card-box {
+    width: 100%;
   }
 
   #sec4.container .card-box .card .img-box {
@@ -302,18 +507,36 @@ main .bg-main img {
     font-size: 1.2rem;
   }
 
-  main .bg-main.bg-1 {
-    top: 30%;
+  /* ======================= SECTION 5 ======================= */
+  #sec5.container {
+    min-height: 50vh;
   }
 
-  main .bg-main.bg-2 {
-    top: 45%;
+  #sec5.container .content .share-container .share {
+    width: 35%;
+  }
+
+  #sec5.container .content .share-container .share span {
+    display: none;
+  }
+
+  #sec5.container .bg {
+    width: 45%;
+    bottom: -5%;
+  }
+
+  main .bg-outer.bg-1 {
+    width: 30%;
+  }
+
+  main .bg-outer.bg-2 {
+    width: 35%;
+    top: 20%;
   }
 }
 
 /* ================================= MOBILE ================================= */
 @media screen and (max-width: 426px) {
-
   /* ======================= UNIVERSAL ======================= */
   .container {
     padding: 50px 35px 50px;
@@ -342,22 +565,22 @@ main .bg-main img {
     width: 70%;
   }
 
-  #sec1.container .content>p {
+  #sec1.container .content > p {
     font-size: 22px;
     margin-top: -1rem;
   }
 
-  #sec1.container .content>div>img {
+  #sec1.container .content > div > img {
     height: 65px;
     width: 65px;
     margin: 1rem 0 0 0;
   }
 
-  #sec1.container>.content>div:nth-child(3) {
+  #sec1.container > .content > div:nth-child(3) {
     flex-flow: column;
   }
 
-  #sec1.container .content>div>a {
+  #sec1.container .content > div > a {
     width: 92.5%;
   }
 
@@ -369,6 +592,11 @@ main .bg-main img {
     text-align: left;
   }
 
+  #sec3.container .content {
+    width: 100%;
+    justify-content: center;
+  }
+
   #sec4.container .card-box {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -376,7 +604,8 @@ main .bg-main img {
   }
 
   #sec4.container .card-box .card {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     margin-bottom: 80px;
   }
 
@@ -394,6 +623,36 @@ main .bg-main img {
 
   #sec4.container .card-box .card p {
     font-size: 1rem;
+  }
+
+  /* ======================= SECTION 5 ======================= */
+  #sec5.container {
+    padding-bottom: 150px;
+  }
+
+  #sec5.container .content p.desc {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  #sec5.container .content .share-container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 75%;
+  }
+
+  #sec5.container .content .share-container .share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 53px;
+    width: 35%;
+  }
+
+  #sec5.container .bg {
+    width: 65%;
+    bottom: -5%;
   }
 
   main .bg-main.bg-1 {

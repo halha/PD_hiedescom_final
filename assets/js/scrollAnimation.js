@@ -1,4 +1,4 @@
-const callback = () => {
+const callbackAnimate = () => {
   // ==================== Scroll Function ====================
   let onScroll = document.querySelectorAll('.onScroll');
   let scroll =
@@ -57,7 +57,7 @@ if (
   document.readyState === 'complete' ||
   (document.readyState !== 'loading' && !document.documentElement.doScroll)
 ) {
-  callback();
+  callbackAnimate();
 } else {
-  document.addEventListener('DOMContentLoaded', callback);
+  document.addEventListener('DOMContentLoaded', callbackAnimate);
 }

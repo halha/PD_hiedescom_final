@@ -366,6 +366,10 @@
   width: 60px;
 }
 
+#sec1.container .left > div .top .acc .img-box img {
+  width: 100%;
+}
+
 #sec1.container .left > div .top .acc span h3 {
   font-size: 1.5rem;
 }
