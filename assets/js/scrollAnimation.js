@@ -3,58 +3,30 @@ const callbackAnimate = () => {
   let onScroll = document.querySelectorAll('.onScroll');
 
   onScroll.forEach((el, i) => {
+    const elementHeight = el.clientHeight;
+
     window.addEventListener('scroll', () => {
-      const breakSec = el.offsetTop;
-      let scroll =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop ||
-        0;
-
-      console.log(el);
-
-      if (scroll > breakSec) {
+      if (inView(el, elementHeight)) {
         el.classList.remove('hidden');
         el.classList.add('play');
       }
     });
   });
-
-  // ==================== Counter  Scroll ====================
-  let i = 1;
-  let onScrollCounter = document.querySelectorAll('.onScrollCounter');
-
-  onScrollCounter.forEach((el, index) => {
-    window.addEventListener('scroll', () => {
-      let breakSec = el.offsetTop + 50;
-
-      if (scroll > breakSec && i == 1) {
-        count();
-        i++;
-      }
-    });
-  });
 };
 
-function count() {
-  let count = document.querySelectorAll('.count');
+function inView(element, elementHeight) {
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY || window.pageYOffset;
 
-  count.forEach((el, i) => {
-    let elQuery = (el[i].Counter = 0);
+  const scrollPosition = scrollY + windowHeight;
+  const elementPosition =
+    element.getBoundingClientRect().top + scrollY + elementHeight;
 
-    elQuery.animate(
-      {
-        Counter: el.textContent,
-      },
-      {
-        duration: 1000,
-        easing: 'swing',
-        step: function (now) {
-          el.textContent = Math.ceil(now).toLocaleString();
-        },
-      }
-    );
-  });
+  if (scrollPosition > elementPosition) {
+    return true;
+  }
+
+  return false;
 }
 
 if (
