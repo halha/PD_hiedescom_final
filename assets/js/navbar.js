@@ -24,7 +24,7 @@ const callback = () => {
     let navLogo = document.getElementById('nav-logo');
 
     if (scroll > screenHeight * 0.5) {
-      nav.classList.add('fixed');
+      // nav.classList.add('fixed');
 
       navShow.classList.remove('black');
       navHide.classList.remove('black');
@@ -36,14 +36,11 @@ const callback = () => {
       navLogo.style.color = 'var(--black)';
       navLogo.style.visibility = 'visible';
     } else {
-      nav.classList.remove('fixed');
+      // nav.classList.remove('fixed');
 
       navShow.classList.add('black');
       navHide.classList.add('black');
       navUl.classList.add('primary');
-
-      // nav.style.backgroundColor = 'var(--primary-bg)';
-      // nav.style.boxShadow = 'unset';
 
       navLogo.style.color = 'var(--black)';
     }

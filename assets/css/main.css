@@ -703,6 +703,28 @@
   margin-bottom: 0;
 }
 
+.bg-outer {
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+}
+
+.bg-outer img {
+  width: 100%;
+}
+
+.bg-outer.bg-1 {
+  width: 15%;
+  top: 0;
+  right: 0;
+}
+
+.bg-outer.bg-2 {
+  width: 25%;
+  bottom: 0;
+  left: 0;
+}
+
 /* ===================================== RESPONSIVE ===================================== */
 /* ================================= TABLET ================================= */
 @media screen and (max-width: 768px) {
@@ -801,5 +823,22 @@
 
   #sec1.container .left > div .bottom .rate .action > div p {
     display: none;
+  }
+
+  #social-modal.modal > div .sosmed {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #social-modal.modal > div .sosmed a {
+    margin: 0 10px;
+    width: 10%;
+    display: block;
+    width: 30%;
+  }
+
+  #social-modal.modal > div .sosmed a:nth-child(1),
+  #social-modal.modal > div .sosmed a:nth-child(2) {
+    margin-bottom: 20px;
   }
 }
