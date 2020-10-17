@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal Kuis 2</title>
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/quiz.css" />
+  </head>
+  <body>
+    <!-- =============================== NAVBAR =============================== -->
+    <nav id="nav">
+      <img src="./assets/img/bg/deco_nav.svg" alt="" />
+      <a href="dashboard.html" id="nav-logo" class="logo">
+        <span>Socied</span>
+      </a>
+
+      <div id="show" class="show white"></div>
+      <ul id="nav-ul" class="primary">
+        <div>
+          <li class="search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Cari Sesuatu?"
+            />
+          </li>
+          <li class="nav-items">
+            <a href="./dashboard.html">
+              <svg
+                width="29"
+                height="30"
+                viewBox="0 0 29 30"
+                fill="#262626"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.95216 28.16V23.5734C9.95216 22.4026 10.9082 21.4534 12.0876 21.4534H16.3989C16.9653 21.4534 17.5084 21.6768 17.9089 22.0744C18.3094 22.4719 18.5344 23.0112 18.5344 23.5734V28.16C18.5308 28.6468 18.7231 29.1148 19.0685 29.4603C19.414 29.8057 19.8841 30 20.3744 30H23.3157C24.6894 30.0035 26.0081 29.4642 26.9807 28.5012C27.9534 27.5381 28.5 26.2305 28.5 24.8667V11.8003C28.5 10.6987 28.0081 9.65376 27.1569 8.947L17.151 1.0138C15.4105 -0.377157 12.9167 -0.332247 11.2281 1.12047L1.45052 8.947C0.559111 9.63292 0.0263284 10.6809 0 11.8003V24.8534C0 27.6958 2.32107 30 5.18426 30H8.05843C9.07683 30 9.90449 29.1843 9.91187 28.1733L9.95216 28.16Z"
+                />
+              </svg>
+            </a>
+            <a href="./discover.html">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="#262626"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 0C23.28 0 30 6.72 30 15C30 23.295 23.28 30 15 30C6.705 30 0 23.295 0 15C0 6.72 6.705 0 15 0ZM20.775 10.065C20.94 9.54 20.46 9.045 19.935 9.21L12.255 11.61C11.94 11.715 11.685 11.955 11.595 12.27L9.195 19.965C9.03 20.475 9.525 20.97 10.035 20.805L17.685 18.405C18 18.315 18.255 18.06 18.345 17.745L20.775 10.065Z"
+                />
+              </svg>
+            </a>
+            <a href="./index.html">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="#262626"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.51 0C26.595 0 30 3.57 30 8.88V21.1365C30 26.4315 26.595 30 21.51 30H8.505C3.42 30 0 26.4315 0 21.1365V8.88C0 3.57 3.42 0 8.505 0H21.51ZM14.985 12.7215C14.265 12.7215 13.68 13.32 13.68 14.0415V20.6715C13.68 21.3915 14.265 21.9765 14.985 21.9765C15.72 21.9765 16.305 21.3915 16.305 20.6715V14.0415C16.305 13.32 15.72 12.7215 14.985 12.7215ZM15.015 7.9665C14.28 7.9665 13.695 8.5515 13.695 9.2865C13.695 10.005 14.28 10.5915 14.985 10.5915C15.735 10.5915 16.32 10.005 16.32 9.2865C16.32 8.5515 15.735 7.9665 15.015 7.9665Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="mo-hide">
+            <div class="img-box">
+              <img src="./assets/img/dashboard/atalie/avatar.jpg" />
+            </div>
+            <div class="option">
+              <a href="./myProfile.html" class="button filled blue-light"
+                >Profil</a
+              >
+              <a href="./index.html" class="button red">Logout</a>
+            </div>
+          </li>
+          <li class="pc-hide">
+            <a href="./myProfile.html" class="button filled blue-light"
+              >Profil</a
+            >
+          </li>
+          <li class="pc-hide">
+            <a href="./index.html" class="button red">Logout</a>
+          </li>
+          <div class="bg">
+            <img src="assets/img/bg/deco_bottom_left_1.svg" />
+          </div>
+        </div>
+        <span id="hide" class="hide black">x</span>
+      </ul>
+    </nav>
+
+    <section>
+      <div id="question-1" class="box">
+        <h2>Soal Latihan TOEFL Reading</h2>
+
+        <h4>
+          1. Long hours and unsociable shifts _____ take their toll on health,
+          relationships and family life.
+        </h4>
+
+        <div class="choices">
+          <div class="answer" onclick="checkAnswer(this,1)">
+            <input type="radio" id="a" name="q-1" />
+            <label for="a">must</label>
+          </div>
+
+          <div class="answer correct" onclick="checkAnswer(this,1)">
+            <input type="radio" id="b" name="q-1" value="b" />
+            <label for="b">can</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,1)">
+            <input type="radio" id="c" name="q-1" value="c" />
+            <label for="c">are able to</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,1)">
+            <input type="radio" id="d" name="q-1" value="d" />
+            <label for="d">shouldn't</label>
+          </div>
+        </div>
+
+        <p>
+          <span style="color: var(--red)">salah</span>
+          <span style="color: var(--green)">pembenaran</span>
+          <span style="color: var(--blue)">benar</span>
+        </p>
+
+        <button disabled class="button filled grey" onclick="nextQuestion(2)">
+          Selanjutnya
+        </button>
+      </div>
+
+      <div id="question-2" class="box" style="display: none">
+        <h2>Soal Latihan TOEFL Reading</h2>
+
+        <h4>
+          2. The 2000 Census showed that married couples _____ half of the 2
+          million households in the state, and 46 percent of those couples had
+          children under roof.
+        </h4>
+
+        <div class="choices">
+          <div class="answer" onclick="checkAnswer(this,2)">
+            <input type="radio" id="a" name="q-1" />
+            <label for="a">and made up</label>
+          </div>
+
+          <div class="answer correct" onclick="checkAnswer(this,2)">
+            <input type="radio" id="b" name="q-1" value="b" />
+            <label for="b">made up</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,2)">
+            <input type="radio" id="c" name="q-1" value="c" />
+            <label for="c">to make up</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,2)">
+            <input type="radio" id="d" name="q-1" value="d" />
+            <label for="d">which they made up</label>
+          </div>
+        </div>
+
+        <p>
+          <span style="color: var(--red)">salah</span>
+          <span style="color: var(--green)">pembenaran</span>
+          <span style="color: var(--blue)">benar</span>
+        </p>
+
+        <button disabled class="button filled grey" onclick="nextQuestion(3)">
+          Selanjutnya
+        </button>
+      </div>
+
+      <div id="question-3" class="box" style="display: none">
+        <h2>Soal Latihan TOEFL Reading</h2>
+
+        <h4>
+          3. Apple Computer has unveiled its new desktop computer design, _____
+          all disk drives and processors into a flat display less than two
+          inches thick
+        </h4>
+
+        <div class="choices">
+          <div class="answer" onclick="checkAnswer(this,3)">
+            <input type="radio" id="a" name="q-1" />
+            <label for="a">which includes</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,3)">
+            <input type="radio" id="b" name="q-1" value="b" />
+            <label for="b">enclosing</label>
+          </div>
+
+          <div class="answer correct" onclick="checkAnswer(this,3)">
+            <input type="radio" id="c" name="q-1" value="c" />
+            <label for="c">which integrates</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,3)">
+            <input type="radio" id="d" name="q-1" value="d" />
+            <label for="d">which contains</label>
+          </div>
+        </div>
+
+        <p>
+          <span style="color: var(--red)">salah</span>
+          <span style="color: var(--green)">pembenaran</span>
+          <span style="color: var(--blue)">benar</span>
+        </p>
+
+        <button disabled class="button filled grey" onclick="nextQuestion(4)">
+          Selanjutnya
+        </button>
+      </div>
+
+      <div id="question-4" class="box" style="display: none">
+        <h2>Soal Latihan TOEFL Reading</h2>
+
+        <h4>
+          4. Across the country, recreational and commercial fishers have been
+          pointing fingers for decades over which group is responsible for _____
+          stocks of sports fish.
+        </h4>
+
+        <div class="choices">
+          <div class="answer" onclick="checkAnswer(this,4)">
+            <input type="radio" id="a" name="q-1" />
+            <label for="a">increasing</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,4)">
+            <input type="radio" id="b" name="q-1" value="b" />
+            <label for="b">growing</label>
+          </div>
+
+          <div class="answer correct" onclick="checkAnswer(this,4)">
+            <input type="radio" id="c" name="q-1" value="c" />
+            <label for="c">dwindling</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,4)">
+            <input type="radio" id="d" name="q-1" value="d" />
+            <label for="d">reduce</label>
+          </div>
+        </div>
+
+        <p>
+          <span style="color: var(--red)">salah</span>
+          <span style="color: var(--green)">pembenaran</span>
+          <span style="color: var(--blue)">benar</span>
+        </p>
+
+        <button disabled class="button filled grey" onclick="nextQuestion(5)">
+          Selanjutnya
+        </button>
+      </div>
+
+      <div id="question-5" class="box" style="display: none">
+        <h2>Soal Latihan TOEFL Reading</h2>
+
+        <h4>
+          5. Nearly all the brown bears in the United States _____ in Alaska,
+          which has an estimated 30,000 to 40,000 brown bears, also called
+          grizzlies.
+        </h4>
+
+        <div class="choices">
+          <div class="answer" onclick="checkAnswer(this,5)">
+            <input type="radio" id="a" name="q-1" />
+            <label for="a">are resident</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,5)">
+            <input type="radio" id="b" name="q-1" value="b" />
+            <label for="b">reside</label>
+          </div>
+
+          <div class="answer" onclick="checkAnswer(this,5)">
+            <input type="radio" id="c" name="q-1" value="c" />
+            <label for="c">inhabit</label>
+          </div>
+
+          <div class="answer correct" onclick="checkAnswer(this,5)">
+            <input type="radio" id="d" name="q-1" value="d" />
+            <label for="d">live</label>
+          </div>
+        </div>
+
+        <p>
+          <span style="color: var(--red)">salah</span>
+          <span style="color: var(--green)">pembenaran</span>
+          <span style="color: var(--blue)">benar</span>
+        </p>
+
+        <button disabled class="button filled grey" onclick="nextQuestion(6)">
+          Selanjutnya
+        </button>
+      </div>
+
+      <div id="question-6" class="box" style="display: none">
+        <h2>Soal Latihan TOEFL Reading</h2>
+
+        <table>
+          <tr>
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Nilai</th>
+            <th>Tanggal</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Maulana Hilmi Arkan</td>
+            <td>100</td>
+            <td>16-10-2020</td>
+          </tr>
+          <tr class="yellow">
+            <td>2</td>
+            <td>Aprilia Atalie Siswantoro</td>
+            <td>90</td>
+            <td>17-10-2020</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Hammam Al-Hakim</td>
+            <td>85</td>
+            <td>17-10-2020</td>
+          </tr>
+        </table>
+
+        <a href="dashboard.html" class="button filled blue-light"
+          >Kembali ke Beranda</a
+        >
+      </div>
+    </section>
+
+    <div class="bg-outer bg-1">
+      <img src="assets/img/bg/deco_top_right_1.svg" />
+    </div>
+
+    <div class="bg-outer bg-2">
+      <img src="assets/img/bg/deco_bottom_left_1.svg" />
+    </div>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/quiz.js"></script>
+  </body>
+</html>
