@@ -24,7 +24,7 @@
   height: auto;
   min-height: 100vh;
   overflow: hidden;
-  padding: 140px 70px 50px;
+  padding: 100px 70px 50px;
   position: relative;
   width: 100%;
 }
@@ -355,6 +355,7 @@
 #sec1.container .left > div .top .acc {
   align-items: center;
   display: flex;
+  text-decoration: none;
 }
 
 #sec1.container .left > div .top .acc .img-box {
