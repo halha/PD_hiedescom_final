@@ -143,6 +143,11 @@ nav.fixed {
   top: 0;
 }
 
+nav>img{
+  height: 80px;
+  margin-left: -4.5rem;
+}
+
 /* ======================= ANIMATION ======================= */
 @-webkit-keyframes show {
   0% {
@@ -374,6 +379,11 @@ nav ul .hide {
     padding: 10px 50px;
   }
 
+  nav>img {
+    height: 80px;
+    margin-left: -3.1rem;
+  }
+
   /* ========================= LOGO ========================= */
   nav .logo {
     line-height: 60px;
@@ -455,6 +465,10 @@ nav ul .hide {
     margin-right: 0;
   }
 
+  nav ul div li a {
+    margin-left: 0;
+  }
+
   nav ul .hide {
     position: absolute;
     right: 40px;
@@ -477,6 +491,11 @@ nav ul .hide {
   /* ======================= UNIVERSAL ======================= */
   nav {
     padding: 10px 20px;
+  }
+
+  nav>img {
+    height: 80px;
+    margin-left: -1.5rem;
   }
 
   /* ========================= LOGO ========================= */
