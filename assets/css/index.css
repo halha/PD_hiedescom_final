@@ -1,0 +1,408 @@
+/* ====================================== UNIVERSAL ====================================== */
+
+.container {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 80px 100px 150px;
+  position: relative;
+  width: 100%;
+}
+
+h1.title {
+  color: #181818;
+  font-family: 'Ubuntu', sans-serif;
+  /* margin-bottom: 30px; */
+  text-align: center;
+  /* text-transform: capitalize; */
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 110px;
+}
+
+h2.title {
+  color: var(--blue-light-2);
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 45px;
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 110%;
+  text-align: center;
+}
+
+p.desc {
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 120%;
+text-align: center;
+letter-spacing: 0.04em;
+margin-bottom: 1.5rem;
+}
+
+/* ====================================== SECTION 1 ====================================== */
+/* ============================== S1 CONTENT ============================== */
+#sec1.container .content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#sec1.container .content {
+  display: block;
+}
+
+#sec1.container .content>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sec1.container .content > div > img {
+  height: 90px;
+  margin: .5rem 0 0 0;
+  pointer-events: none;
+  width: 90px;
+}
+
+#sec1.container .content>p{
+  padding: 1rem auto;
+  /* font-family: Roboto; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  text-align: center;
+  color: #262626;
+}
+
+#sec1.container .content>div>a {
+  margin: 1rem 0 0 0;
+  padding: 10px;
+  width: 45%;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+#sec1.container .content>div>.login {
+  background-color: var(--blue-light-2);
+}
+
+#sec1.container .content>div>.about {
+  background-color: #FFBA00;
+}
+
+
+/* ======================= ANIMATION ======================= */
+@-webkit-keyframes up-down {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+/* ============================ S1  BACKGROUND ============================ */
+#sec1.container .bg1 {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  display: none;
+}
+
+#sec1.container .bg1:after {
+  content: '';
+  filter: opacity(0.7);
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: none;
+}
+
+/* ====================================== SECTION 2 ====================================== */
+#sec2.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* ============================== S2 CONTENT ============================== */
+#sec2.container .content {
+  width: 75%;
+  margin: auto;
+}
+
+/* ====================================== SECTION 4 ====================================== */
+#sec4.container {
+  min-height: auto;
+}
+
+#sec4.container h1.title {
+  margin-bottom: 120px;
+}
+
+/* =============================== S4  CARD =============================== */
+#sec4.container .card-box {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#sec4.container .card-box .card {
+  color: var(--dark-blue-100);
+  text-decoration: none;
+  width: 30%;
+}
+
+#sec4.container .card-box .card .img-box {
+  width: 250px;
+  height: 250px;
+  margin: auto auto 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#sec4.container .card-box .card .img-box img {
+  width: 100%;
+}
+
+#sec4.container .card-box .card h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#sec4.container .card-box .card p {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+/* ======================================= MAIN BG ======================================= */
+main {
+  position: relative;
+}
+
+main .bg-main {
+  position: absolute;
+  z-index: -1;
+}
+
+main .bg-main.bg-1 {
+  top: 27%;
+  right: 0;
+  width: 15%;
+}
+
+main .bg-main.bg-2 {
+  top: 56%;
+  left: -2%;
+  width: 15%;
+}
+
+main .bg-main img {
+  width: 100%;
+  pointer-events: none;
+}
+
+/* ===================================== RESPONSIVE ===================================== */
+/* ================================= TABLET ================================= */
+@media screen and (max-width: 768px) {
+
+  /* ======================= UNIVERSAL ======================= */
+  .container {
+    padding: 80px 50px 50px;
+  }
+
+  h1.title {
+    font-size: 6rem;
+  }
+
+  h2.title {
+    font-size: 3rem;
+  }
+
+  /* ======================= SECTION 1 ======================= */
+  #sec1.container .content {
+    width: 60%;
+  }
+
+  #sec1.container .content>p {
+    font-size: 35px;
+  }
+
+  #sec2.container {
+    min-height: auto;
+  }
+
+  #sec4.container .card-box .card .img-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  #sec4.container .card-box .card h3 {
+    font-size: 1.2rem;
+  }
+
+  #sec4.container .card-box .card p {
+    font-size: 1.2rem;
+  }
+
+  main .bg-main.bg-1 {
+    top: 30%;
+  }
+
+  main .bg-main.bg-2 {
+    top: 45%;
+  }
+}
+
+/* ================================= MOBILE ================================= */
+@media screen and (max-width: 426px) {
+
+  /* ======================= UNIVERSAL ======================= */
+  .container {
+    padding: 50px 35px 50px;
+  }
+
+  .button {
+    font-size: 0.875rem;
+    padding: 14px 30px;
+  }
+
+  h1.title {
+    font-size: 3.5rem;
+    text-align: right;
+  }
+
+  h2.title {
+    font-size: 2rem;
+  }
+
+  p.desc {
+    font-size: 1.125rem;
+  }
+
+  /* ======================= SECTION 1 ======================= */
+  #sec1.container .content {
+    width: 70%;
+  }
+
+  #sec1.container .content>p {
+    font-size: 22px;
+    margin-top: -1rem;
+  }
+
+  #sec1.container .content>div>img {
+    height: 65px;
+    width: 65px;
+    margin: 1rem 0 0 0;
+  }
+
+  #sec1.container>.content>div:nth-child(3) {
+    flex-flow: column;
+  }
+
+  #sec1.container .content>div>a {
+    width: 92.5%;
+  }
+
+  #sec2.container .content {
+    width: 100%;
+  }
+
+  #sec2.container .content p.desc {
+    text-align: left;
+  }
+
+  #sec4.container .card-box {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #sec4.container .card-box .card {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  #sec4.container h1.title {
+    margin-bottom: 60px;
+  }
+
+  #sec4.container .card-box .card:last-child {
+    margin-bottom: 0;
+  }
+
+  #sec4.container .card-box .card h3 {
+    font-size: 1rem;
+  }
+
+  #sec4.container .card-box .card p {
+    font-size: 1rem;
+  }
+
+  main .bg-main.bg-1 {
+    width: 35%;
+    top: 20%;
+  }
+
+  main .bg-main.bg-2 {
+    width: 35%;
+    top: 48%;
+  }
+}

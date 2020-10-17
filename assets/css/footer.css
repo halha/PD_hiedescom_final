@@ -1,0 +1,213 @@
+/* ====================================== UNIVERSAL ====================================== */
+footer {
+  box-shadow: 0px 0px 30px rgba(46, 60, 64, 0.4);
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 35px 100px 0;
+  width: 100%;
+}
+
+/* ================================= TOP ================================= */
+footer .top {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+footer .top .left,
+footer .top .right {
+  width: 50%;
+}
+
+/* ======================= TOP  LEFT ======================= */
+footer .top .left .logo {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+footer .top .left .logo img {
+  box-shadow: 0px 20px 26px -15px rgba(0, 0, 0, 0.3);
+  height: 44px;
+  height: 2.75rem;
+  margin-right: 22px;
+  pointer-events: none;
+}
+
+footer .top .left .logo h3 {
+  color: var(--blue-dark-100);
+  font-size: 44px;
+  font-size: 2.75rem;
+  font-weight: 800;
+}
+
+footer .top .left p {
+  color: var(--blue-dark-80);
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  width: 60%;
+}
+
+/* ======================= TOP RIGHT ======================= */
+footer .top .right {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+footer .top .right .column * {
+  margin-bottom: 12px;
+}
+
+footer .top .right .column h3 {
+  color: var(--blue-dark-100);
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+footer .top .right .column a {
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer .top .right .column a.see {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+footer .top .right .column a:hover {
+  color: var(--primary-color);
+}
+
+footer .top .right .column a:last-child {
+  margin-bottom: 34px;
+}
+
+/* ================================ BOTTOM ================================ */
+footer .bottom {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 27px 0;
+  position: relative;
+}
+
+footer .bottom:after {
+  content: '';
+  background: var(--grey-40);
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+footer .bottom span {
+  margin: 0 5px;
+}
+
+footer .bottom span img {
+  pointer-events: none;
+}
+
+/* ===================================== RESPONSIVE ===================================== */
+/* ================================= TABLET ================================= */
+@media screen and (max-width: 768px) {
+  /* ======================= UNIVERSAL ======================= */
+  footer {
+    padding: 35px 50px 0;
+  }
+
+  /* ========================== TOP ========================== */
+  footer .top .left {
+    width: 50%;
+  }
+
+  footer .top .right {
+    width: 60%;
+  }
+
+  footer .top .right .column h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* ================================= MOBILE ================================= */
+@media screen and (max-width: 426px) {
+  /* ======================= UNIVERSAL ======================= */
+  footer {
+    padding: 35px 38px 0;
+  }
+
+  /* ========================== TOP ========================== */
+  footer .top {
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  footer .top .left,
+  footer .top .right {
+    width: 97%;
+  }
+
+  footer .top .left,
+  footer .top .left .logo {
+    margin-bottom: 24px;
+  }
+
+  footer .top .left p {
+    width: 100%;
+  }
+
+  footer .top .right {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  footer .top .right .column {
+    width: 50%;
+  }
+}
