@@ -228,6 +228,34 @@
   margin-bottom: 20px;
 }
 
+#sec1.container .left .profile .top-p .data .switch span.button:first-child {
+  display: block;
+}
+
+#sec1.container .left .profile .top-p .data .switch span.button:last-child {
+  display: none;
+}
+
+#sec1.container
+  .left
+  .profile
+  .top-p
+  .data
+  .switch.active
+  span.button:first-child {
+  display: none;
+}
+
+#sec1.container
+  .left
+  .profile
+  .top-p
+  .data
+  .switch.active
+  span.button:last-child {
+  display: block;
+}
+
 #sec1.container .left .profile .top-p .data span.button {
   width: fit-content;
   padding: 8px 13px;

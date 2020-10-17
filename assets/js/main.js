@@ -35,6 +35,10 @@ function closeModal() {
   document.getElementById('post-modal').style.display = 'none';
 }
 
+function updateFollow() {
+  document.querySelector('.switch').classList.toggle('active');
+}
+
 const callbackMain = () => {
   const activity = document.querySelectorAll('.activity');
   const quiz = document.querySelectorAll('.quiz');
