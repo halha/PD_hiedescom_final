@@ -89,11 +89,11 @@ section {
   margin-bottom: 20px;
 }
 
-a.button {
+.box a.button.blue-light.blue-light {
   color: var(--white) !important;
 }
 
-a.button,
+.box a.button.blue-light.blue-light,
 .box button.button {
   width: 100%;
   border-radius: 10px;
@@ -109,14 +109,14 @@ a.button,
   opacity: 1;
 }
 
-a.button,
+.box a.button.blue-light.blue-light,
 .box button.button.allowed {
   background: var(--blue-light-2);
   border: 1px solid var(--blue-light-2);
   cursor: pointer;
 }
 
-a.button:hover,
+.box a.button.blue-light.blue-light:hover,
 .box button.button.allowed:hover {
   opacity: 0.7;
 }

@@ -1,5 +1,4 @@
 function rateClick(e) {
-  console.log(e);
   e.classList.toggle('active');
 }
 
@@ -7,8 +6,6 @@ function addComment(event, i) {
   event.preventDefault();
 
   const nComment = document.getElementById(`value-${i}`).value;
-
-  console.log(nComment);
 
   document.getElementById(`newComment-${i}`).style.display = 'flex';
   document.querySelector(`#newComment-${i} .box p`).innerHTML = nComment;

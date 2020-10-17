@@ -16,10 +16,8 @@ function checkAnswer(e, i) {
   // resetClass(i);
 
   if (e === correctAnswer) {
-    console.log('correct');
     correctAnswer.classList.add('blue');
   } else {
-    console.log('testing');
     e.classList.add('red');
     correctAnswer.classList.add('green');
   }
@@ -49,7 +47,6 @@ function resetClass(i) {
   if (green) green.classList.remove('green');
   if (red) red.classList.remove('red');
   if (blue) blue.classList.remove('blue');
-  console.log('test');
 }
 
 const callbackQuiz = () => {};
