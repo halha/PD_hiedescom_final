@@ -42,8 +42,8 @@ const callback = () => {
       navHide.classList.add('black');
       navUl.classList.add('primary');
 
-      nav.style.backgroundColor = 'var(--primary-bg)';
-      nav.style.boxShadow = 'unset';
+      // nav.style.backgroundColor = 'var(--primary-bg)';
+      // nav.style.boxShadow = 'unset';
 
       navLogo.style.color = 'var(--black)';
     }
