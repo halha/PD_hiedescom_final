@@ -3,54 +3,588 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <title>Socied</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/Logo.svg"
+      sizes="96x96"
+    />
+
+    <!-- ================================= CSS ================================= -->
     <link rel="stylesheet" href="assets/css/navbar.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/scrollAnimation.css" />
+
     <style>
-      .sect {
-        width: 100%;
-        height: 200vh;
+      #nav {
+        background: none;
+        box-shadow: unset;
+        position: absolute;
+      }
+
+      nav ul div li a:hover {
+        color: var(--blue-light-2);
+      }
+      nav ul div li a {
+        margin-left: 4rem;
       }
     </style>
   </head>
-  <body>
+
+  <body style="background-color: #fff">
     <!-- =============================== NAVBAR =============================== -->
     <nav id="nav">
+      <img src="./assets/img/bg/deco_nav.svg" alt="" />
       <a href="index.html" id="nav-logo" class="logo">
-        <div class="logo-icon">
-          <img src="" />
-        </div>
-        <span>Judul Web 1</span>
+        <span>Socied</span>
       </a>
 
       <div id="show" class="show white"></div>
       <ul id="nav-ul" class="primary">
         <div>
-          <li><a class="active">Beranda</a></li>
           <li>
-            <a href="#">Fitur</a>
+            <a href="#sec2">About</a>
           </li>
           <li>
-            <a href="#">Fitur</a>
+            <a href="#sec3">Feature</a>
           </li>
           <li>
-            <a href="#">Other</a>
+            <a href="#sec4">Team</a>
           </li>
         </div>
         <span id="hide" class="hide black">x</span>
       </ul>
     </nav>
 
-    <!-- =============================== SEC  1 =============================== -->
-    <section id="sec1" class="container">
-      <h1>Test Sec 1</h1>
-    </section>
+    <main>
+      <div class="bg-mix-1">
+        <!-- ============================== SECTION 1 ============================== -->
+        <section id="sec1" class="container">
+          <div class="content">
+            <div>
+              <img src="assets/img/logo.svg" alt="Logo" class="play fadeIn" />
+              <h1 class="title play fadeInRight delay2">Socied</h1>
+            </div>
+            <p class="play fadeInUp delay4">Social Media for Education</p>
+            <div>
+              <a href="login.html" class="login play fadeIn delay7">Login</a>
+              <a href="#sec2" class="about play fadeIn delay8">About</a>
+            </div>
+          </div>
+          <div class="bg1"></div>
+        </section>
 
-    <!-- =============================== SEC  2 =============================== -->
-    <section id="sec2" class="container">
-      <h1>Test Sec 2</h1>
-    </section>
+        <!-- ============================== SECTION 2 ============================== -->
+        <section id="sec2" class="container">
+          <div class="content">
+            <h2 class="title onScroll fadeInRight hidden">About Socied</h2>
+            <p class="desc onScroll fadeInUp hidden">
+              Saat pandemi seperti sekarang ini mengharuskan pelajar untuk
+              belajar dari rumah atau study from home. Sekolah terutama guru pun
+              mulai beradaptasi dengan menggunakan berbagai aplikasi untuk
+              memberikan pelajaran.
+            </p>
+            <p class="desc onScroll fadeInUp hidden">
+              Melihat banyaknya sekolah yang menggunakan sosial media sebaga
+              salah satu penghubungnya, kami pun membuat sebuah aplikasi sosial
+              media yang dikhususkan untuk pembelajaran dari rumah dengan
+              beragam fitur pendukung untuk mempermudah kamu dalam belajar
+            </p>
+          </div>
+        </section>
 
+        <div class="bg">
+          <img src="assets/img/bg/deco_midle.svg" />
+        </div>
+      </div>
+
+      <div class="bg-mix">
+        <!-- ============================== SECTION 3 ============================== -->
+        <section id="sec3" class="container">
+          <h2 class="title onScroll fadeInUp hidden">Our Main Feature</h2>
+
+          <div class="content">
+            <div class="card onScroll fadeInUp hidden">
+              <div class="icon">
+                <svg
+                  width="98"
+                  height="108"
+                  viewBox="0 0 98 108"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M4.4624 41.0211H93.582"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M26.7891 79.9809H26.8354M71.2099 60.5483H71.2562H71.2099ZM49.0226 60.5483H49.069H49.0226ZM26.7891 60.5483H26.8354H26.7891ZM71.2099 79.9809H71.2562H71.2099ZM49.0226 79.9809H49.069H49.0226Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M69.2183 4V20.4539"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M28.8276 4V20.4539"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M70.1912 11.8962H27.8548C13.1714 11.8962 4 20.0758 4 35.1113V80.3594C4 95.6313 13.1714 104 27.8548 104H70.1449C84.8747 104 93.9999 95.7731 93.9999 80.7377V35.1113C94.046 20.0758 84.921 11.8962 70.1912 11.8962Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p>Bagikan Acara</p>
+            </div>
+
+            <div class="card onScroll fadeInUp hidden delay1">
+              <div class="icon">
+                <svg
+                  width="108"
+                  height="108"
+                  viewBox="0 0 108 108"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M50.3261 4.20453H30.5122C14.217 4.20453 4 15.741 4 32.0733V76.1313C4 92.4636 14.1693 104 30.5122 104H77.2728C93.621 104 103.79 92.4636 103.79 76.1313V54.7859"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M36.2054 47.2976L75.8068 7.69623C80.7404 2.76792 88.737 2.76792 93.6706 7.69623L100.12 14.1454C105.053 19.079 105.053 27.0809 100.12 32.0092L60.3277 71.8013C58.1709 73.9581 55.2457 75.1717 52.1933 75.1717H32.3423L32.8404 55.1405C32.9146 52.1941 34.1175 49.3855 36.2054 47.2976Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M69.7891 13.8148L93.9855 38.0112"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p>Buat Soal Kuis</p>
+            </div>
+
+            <div class="card onScroll fadeInUp hidden delay2">
+              <div class="icon">
+                <svg
+                  width="93"
+                  height="108"
+                  viewBox="0 0 93 108"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M61.1036 4.06458H24.8768C13.6652 4.06458 4 13.1526 4 24.3697V82.7039C4 94.5526 13.0336 104 24.8768 104H68.3784C79.5954 104 88.6834 93.9264 88.6834 82.7039V32.7933L61.1036 4.06458Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M59.6733 4V19.84C59.6733 27.5722 65.9298 33.845 73.6566 33.8614C80.8279 33.8777 88.1625 33.8831 88.658 33.8505"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M58.6376 73.7397H29.25"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M47.5216 46.7742H29.2476"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p>Bagikan Materi</p>
+            </div>
+
+            <div class="card onScroll fadeInUp hidden">
+              <div class="icon">
+                <svg
+                  width="108"
+                  height="83"
+                  viewBox="0 0 108 83"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M81.5591 36.8837C89.3716 36.8837 95.7092 30.5506 95.7092 22.7381C95.7092 14.9256 89.3716 8.59241 81.5591 8.59241"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M88.0645 52.2563C90.3975 52.4172 92.7171 52.748 95.001 53.262C98.1742 53.8832 101.991 55.1838 103.35 58.0308C104.217 59.8543 104.217 61.9773 103.35 63.8053C101.996 66.6523 98.1742 67.9484 95.001 68.601"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M26.4397 36.8837C18.6272 36.8837 12.2896 30.5506 12.2896 22.7381C12.2896 14.9256 18.6272 8.59241 26.4397 8.59241"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M19.9345 52.2563C17.6015 52.4172 15.2819 52.748 12.998 53.262C9.82475 53.8832 6.00788 55.1838 4.65365 58.0308C3.78212 59.8543 3.78212 61.9773 4.65365 63.8053C6.00341 66.6523 9.82475 67.9484 12.998 68.601"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M53.9766 55.3024C69.8073 55.3024 83.3317 57.698 83.3317 67.2848C83.3317 76.8672 69.8966 79.3522 53.9766 79.3522C38.1415 79.3522 24.6216 76.9566 24.6216 67.3698C24.6216 57.7829 38.0566 55.3024 53.9766 55.3024Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    opacity="0.4"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M53.9768 41.6279C43.5362 41.6279 35.165 33.2567 35.165 22.8117C35.165 12.3712 43.5362 4 53.9768 4C64.4173 4 72.7885 12.3712 72.7885 22.8117C72.7885 33.2567 64.4173 41.6279 53.9768 41.6279Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p>Tambah Teman</p>
+            </div>
+
+            <div class="card onScroll fadeInUp hidden delay1">
+              <div class="icon">
+                <svg
+                  width="89"
+                  height="108"
+                  viewBox="0 0 89 108"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M42.3333 86.4762L11.4762 103.381C9.01249 104.661 5.97727 103.755 4.61905 101.333C4.2261 100.583 4.0141 99.7515 4 98.9048V24C4 9.71428 13.7619 4 27.8095 4H60.8095C74.4286 4 84.619 9.33333 84.619 23.0476V98.9048C84.619 100.256 84.0822 101.552 83.1267 102.508C82.1711 103.463 80.8751 104 79.5238 104C78.6618 103.986 77.8146 103.775 77.0476 103.381L46 86.4762C44.8559 85.8581 43.4774 85.8581 42.3333 86.4762Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M25.1904 38.0476H63.1428"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p>Simpan</p>
+            </div>
+
+            <div class="card onScroll fadeInUp hidden delay2">
+              <div class="icon">
+                <svg
+                  width="108"
+                  height="108"
+                  viewBox="0 0 108 108"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M54.2841 4.00028C36.7343 3.92978 20.4278 13.0355 11.3025 28.002C2.17717 42.9686 1.56459 61.612 9.68784 77.1434L10.6895 79.0958C11.5105 80.6321 11.6822 82.4324 11.1664 84.0958C9.7371 87.8921 8.54244 91.7724 7.58919 95.7148C7.58919 97.7148 8.16155 98.8577 10.3079 98.8101C14.1095 97.9706 17.8534 96.889 21.5166 95.572C23.0943 95.1375 24.7719 95.238 26.2862 95.8577C27.6694 96.5244 30.4835 98.2386 30.5789 98.2386C48.9577 107.902 71.404 105.236 86.9988 91.5374C102.594 77.8383 108.099 55.9502 100.838 36.5205C93.5767 17.0907 75.0554 4.15294 54.2841 4.00028Z"
+                    stroke="#FFBA00"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M30.4355 59.0002C33.197 59.0002 35.4355 56.7617 35.4355 54.0002C35.4355 51.2388 33.197 49.0002 30.4355 49.0002C27.6741 49.0002 25.4355 51.2388 25.4355 54.0002C25.4355 56.7617 27.6741 59.0002 30.4355 59.0002Z"
+                    fill="#FFBA00"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M54.2842 59.0002C57.0456 59.0002 59.2842 56.7617 59.2842 54.0002C59.2842 51.2388 57.0456 49.0002 54.2842 49.0002C51.5228 49.0002 49.2842 51.2388 49.2842 54.0002C49.2842 56.7617 51.5228 59.0002 54.2842 59.0002Z"
+                    fill="#FFBA00"
+                  />
+                  <path
+                    opacity="0.4"
+                    d="M78.1318 59.0002C80.8933 59.0002 83.1318 56.7617 83.1318 54.0002C83.1318 51.2388 80.8933 49.0002 78.1318 49.0002C75.3704 49.0002 73.1318 51.2388 73.1318 54.0002C73.1318 56.7617 75.3704 59.0002 78.1318 59.0002Z"
+                    fill="#FFBA00"
+                  />
+                </svg>
+              </div>
+              <p>Tanya Tugas</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================== SECTION 4 ============================== -->
+        <section id="sec4" class="container">
+          <h2 class="title onScroll fadeInUp hidden">Meet The Team</h2>
+
+          <div class="card-box">
+            <a
+              target="_blank"
+              href="https://github.com/angkasa27"
+              class="card onScroll flip hidden delay1"
+              target="_blank"
+            >
+              <div class="img-box">
+                <img
+                  src="assets/img/index/Dimas Angkasa Nurindra-min.jpg"
+                  alt="Dimas Angkasa Nurindra"
+                />
+              </div>
+              <h3>Dimas Angkasa Nurindra</h3>
+              <p class="role">Hustler</p>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://github.com/halha"
+              class="card onScroll flip hidden delay2"
+              target="_blank"
+            >
+              <div class="img-box">
+                <img
+                  src="assets/img/index/Hammam Al-Hakim-min.jpg"
+                  alt="Hammam Al-Hakim"
+                />
+              </div>
+              <h3>Hammam Al-Hakim</h3>
+              <p class="role">Hacker</p>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://github.com/arknmaulana"
+              class="card onScroll flip hidden delay3"
+              target="_blank"
+            >
+              <div class="img-box">
+                <img
+                  src="assets/img/index/Maulana Hilmi Arkan-min.jpg"
+                  alt="Maulana Hilmi Arkan"
+                />
+              </div>
+              <h3>Maulana Hilmi Arkan</h3>
+              <p class="role">Hipster</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- ============================== SECTION 5 ============================== -->
+        <section id="sec5" class="container">
+          <div class="content">
+            <h2 class="title onScroll fadeInLeft hidden">Berbagi itu indah.</h2>
+            <p class="desc onScroll fadeInUp hidden delay1">
+              Bagikan ke teman, kerabat, atau saudaramu agar dapat belajar
+              bersama dan berbagi ilmu
+            </p>
+            <div class="share-container">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https://socied.web.app/"
+                class="share onScroll fadeIn hidden delay2 ic-blue"
+                target="_blank"
+              >
+                <svg
+                  width="64"
+                  height="63"
+                  viewBox="0 0 64 63"
+                  fill="#747474"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32.0029 0.256348C14.5165 0.256348 0.339355 14.247 0.339355 31.5032C0.339355 47.097 11.9167 60.022 27.0565 62.3751V40.5376H19.0132V31.5032H27.0565V24.6188C27.0565 16.7813 31.7844 12.4595 39.0139 12.4595C42.4782 12.4595 46.1072 13.0688 46.1072 13.0688V20.7532H42.1045C38.1779 20.7532 36.9492 23.1657 36.9492 25.6376V31.497H45.724L44.3212 40.5313H36.9492V62.3688C52.089 60.0282 63.6664 47.1001 63.6664 31.5032C63.6664 14.247 49.4892 0.256348 32.0029 0.256348Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                target="_blank"
+                href="https://twitter.com/intent/tweet?url=%20https%3A%2F%2Fsocied.web.app%2F&text=Kuy%20Buka%20Socied"
+                class="share onScroll fadeIn hidden delay1 ic-light-blue"
+                target="_blank"
+              >
+                <svg
+                  width="33"
+                  height="58"
+                  viewBox="0 0 33 58"
+                  fill="#747474"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.9931 57.3512C14.5806 57.3512 8.30869 52.9654 8.30869 42.4679V25.6593H0.658691V16.5551C9.07744 14.3416 12.5993 7.00126 13.0024 0.648926H21.7399V15.0826H31.9368V25.6593H21.7399V40.2956C21.7399 44.6846 23.9243 46.1983 27.4056 46.1983H32.3431V57.3512H22.9931Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                target="_blank"
+                href="https://t.me/share/url?url=https%3A%2F%2Fsocied.web.app%2F&text=Kuy%20Buka%20Socied%21"
+                class="share onScroll fadeIn hidden delay3 ic-light-blue"
+                target="_blank"
+              >
+                <svg
+                  width="64"
+                  height="53"
+                  viewBox="0 0 64 53"
+                  fill="#747474"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M59.4381 0.615673L3.29308 21.9813C-0.538584 23.5 -0.516416 25.6094 2.59008 26.55L17.0048 30.9875L50.3561 10.2219C51.9331 9.27505 53.3739 9.78442 52.1896 10.8219L25.1684 34.8875H25.1621L25.1684 34.8907L24.1741 49.5532C25.6308 49.5532 26.2736 48.8938 27.0906 48.1157L34.0921 41.3969L48.6556 52.0126C51.3409 53.4719 53.2694 52.7219 53.9376 49.5594L63.4978 5.09692C64.4763 1.22505 61.9999 -0.528077 59.4381 0.615673Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?text=Kuy%20Buka%20Socied%20di%20https%3A%2F%2Fsocied.web.app%2F"
+                class="share onScroll fadeIn hidden delay4 ic-green"
+                target="_blank"
+              >
+                <svg
+                  width="57"
+                  height="58"
+                  viewBox="0 0 57 58"
+                  fill="#747474"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M48.5094 8.83783C43.2125 3.464 36.1688 0.503167 28.6656 0.5C13.2031 0.5 0.615625 13.2522 0.609375 28.9272C0.609375 33.9368 1.9 38.8262 4.35312 43.1392L0.375 57.8673L15.2469 53.9122C19.3469 56.1763 23.9594 57.3702 28.6531 57.3733H28.6656C44.125 57.3733 56.7125 44.6212 56.7188 28.9462C56.7188 21.3525 53.8063 14.2117 48.5094 8.83783ZM28.6656 52.5758H28.6562C24.4719 52.5727 20.3687 51.4358 16.7875 49.2793L15.9375 48.7663L7.1125 51.1128L9.46562 42.395L8.9125 41.502C6.57812 37.74 5.34688 33.3922 5.34688 28.9272C5.35313 15.8995 15.8125 5.30067 28.675 5.30067C34.9031 5.30383 40.7562 7.76433 45.1594 12.2293C49.5594 16.6975 51.9844 22.6318 51.9813 28.9462C51.975 41.9738 41.5156 52.5758 28.6656 52.5758ZM41.4562 34.8773C40.7531 34.5195 37.3094 32.8032 36.6656 32.5657C36.025 32.3282 35.5594 32.211 35.0906 32.9203C34.6219 33.6297 33.2781 35.2288 32.8687 35.7038C32.4594 36.1788 32.05 36.2358 31.35 35.8812C30.65 35.5265 28.3906 34.776 25.7125 32.3567C23.6281 30.4725 22.2219 28.1482 21.8125 27.4357C21.4031 26.7232 21.7687 26.34 22.1219 25.9853C22.4375 25.6687 22.8219 25.1557 23.1719 24.7408C23.5219 24.326 23.6375 24.0315 23.8719 23.5565C24.1063 23.0815 23.9906 22.6667 23.8125 22.312C23.6375 21.9542 22.2344 18.4582 21.65 17.0363C21.0844 15.6588 20.5063 15.8425 20.075 15.8235C19.6687 15.8045 19.2 15.7982 18.7344 15.7982C18.2656 15.7982 17.5063 15.9755 16.8625 16.6848C16.2188 17.3973 14.4094 19.1137 14.4094 22.6097C14.4094 26.1057 16.9219 29.4845 17.2719 29.9595C17.6219 30.4345 22.2156 37.607 29.2469 40.685C30.9219 41.4165 32.2281 41.8535 33.2437 42.1828C34.9219 42.7243 36.45 42.6452 37.6594 42.4647C39.0062 42.262 41.8062 40.7483 42.3906 39.089C42.975 37.4297 42.975 36.0078 42.8 35.7102C42.625 35.4125 42.1531 35.232 41.4562 34.8773Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg">
+            <img src="assets/img/bg/deco_bottom_left_1.svg" />
+          </div>
+        </section>
+      </div>
+
+      <!-- ============================== BACKGROUND ============================== -->
+      <div class="bg-outer bg-1 play fadeInDown delay6">
+        <img src="assets/img/bg/deco_top_right.svg" />
+      </div>
+
+      <div class="bg-outer bg-2 play fadeInUp delay6">
+        <img src="assets/img/bg/deco_mid_left.svg" />
+      </div>
+
+      <div class="bg-outer bg-3 onScroll fadeInUp delay3">
+        <img src="assets/img/bg/deco_mid_right.svg" />
+      </div>
+    </main>
+
+    <!-- =============================== FOOTER =============================== -->
+    <footer>
+      <div class="top">
+        <div class="left">
+          <div>
+            <a href="index.html" class="logo">
+              <img src="assets/img/Logo.svg" alt="Socied" />
+              <h3>Socied</h3>
+            </a>
+            <h3>Social Media for Education</h3>
+          </div>
+          <div>
+            <p>
+              Aplikasi sosial media yang dikhususkan untuk pembelajaran dari
+              rumah dengan beragam fitur pendukung untuk mempermudah kamu
+              belajar
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="column">
+            <a href="#sec3">Feature</a>
+          </div>
+
+          <div class="column">
+            <a href="#sec4">Team</a>
+          </div>
+
+          <div class="column">
+            <a href="#sec5">Share</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom">
+        Create with
+        <span><img src="assets/img/icon/ic_heart.svg" alt="Heart" /></span> by
+        TimPD
+      </div>
+    </footer>
+
+    <!-- ============================== JS SCRIPT ============================== -->
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/navbar-2.js"></script>
+    <script src="assets/js/scrollAnimation.js"></script>
   </body>
 </html>

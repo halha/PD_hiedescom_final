@@ -1,63 +1,39 @@
-const callback = () => {
+const callbackAnimate = () => {
   // ==================== Scroll Function ====================
   let onScroll = document.querySelectorAll('.onScroll');
-  let scroll =
-    (window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0) + window.innerHeight;
 
   onScroll.forEach((el, i) => {
-    const breakSec = el.offsetTop;
+    const elementHeight = el.clientHeight;
 
-    if (scroll > breakSec) {
-      el.classList.remove('hidden');
-      el.classList.add('play');
-    }
-  });
-
-  // ==================== Counter  Scroll ====================
-  let i = 1;
-  let onScrollCounter = document.querySelectorAll('.onScrollCounter');
-
-  onScrollCounter.forEach((el, index) => {
     window.addEventListener('scroll', () => {
-      let breakSec = el.offsetTop + 50;
-
-      if (scroll > breakSec && i == 1) {
-        count();
-        i++;
+      if (inView(el, elementHeight)) {
+        el.classList.remove('hidden');
+        el.classList.add('play');
       }
     });
   });
 };
 
-function count() {
-  let count = document.querySelectorAll('.count');
+function inView(element, elementHeight) {
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY || window.pageYOffset;
 
-  count.forEach((el, i) => {
-    let elQuery = (el[i].Counter = 0);
+  const scrollPosition = scrollY + windowHeight;
+  const elementPosition =
+    element.getBoundingClientRect().top + scrollY + elementHeight;
 
-    elQuery.animate(
-      {
-        Counter: el.textContent,
-      },
-      {
-        duration: 1000,
-        easing: 'swing',
-        step: function (now) {
-          el.textContent = Math.ceil(now).toLocaleString();
-        },
-      }
-    );
-  });
+  if (scrollPosition > elementPosition) {
+    return true;
+  }
+
+  return false;
 }
 
 if (
   document.readyState === 'complete' ||
   (document.readyState !== 'loading' && !document.documentElement.doScroll)
 ) {
-  callback();
+  callbackAnimate();
 } else {
-  document.addEventListener('DOMContentLoaded', callback);
+  document.addEventListener('DOMContentLoaded', callbackAnimate);
 }

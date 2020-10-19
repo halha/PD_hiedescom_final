@@ -1,72 +1,44 @@
 /* ====================================== UNIVERSAL ====================================== */
-.color-light-blue {
-  color: var(--blue-light) !important;
-}
-
-.color-red-20 {
-  color: var(--red-20) !important;
-}
-
-.color-white-2 {
-  color: var(--white-2) !important;
-}
 
 .container {
   box-sizing: border-box;
   height: auto;
   min-height: 100vh;
   overflow: hidden;
-  padding: 80px 100px 50px;
+  padding: 80px 100px 150px;
   position: relative;
   width: 100%;
 }
 
-.button {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  background: var(--red-100);
-  border-radius: 10px;
-  box-shadow: 0px 0px 30px rgba(46, 60, 64, 0.4);
-  box-sizing: border-box;
-  padding: 22px 30px;
-  text-decoration: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background: var(--red-dark);
-}
-
 h1.title {
-  color: #ee6a51;
+  color: #181818;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 57.6px;
-  font-size: 3.6rem;
-  margin-bottom: 30px;
-  text-transform: capitalize;
+  /* margin-bottom: 30px; */
+  text-align: center;
+  /* text-transform: capitalize; */
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 110px;
 }
 
 h2.title {
-  color: var(--primary-color);
+  color: var(--blue-light-2);
   font-family: 'Ubuntu', sans-serif;
-  font-size: 40px;
-  font-size: 2.5rem;
-  margin: auto auto 44px auto;
-  padding: 20px;
+  margin-bottom: 45px;
   position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 110%;
   text-align: center;
-  text-transform: capitalize;
-  width: 65%;
+  padding-bottom: 30px;
 }
 
 h2.title:after {
   content: '';
   width: 100px;
   height: 4px;
-  background: var(--primary-color);
+  background: var(--blue-light-2);
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -75,35 +47,540 @@ h2.title:after {
 }
 
 p.desc {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+/* ====================================== SECTION 1 ====================================== */
+/* ============================== S1 CONTENT ============================== */
+#sec1.container .content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#sec1.container .content {
+  display: block;
+}
+
+#sec1.container .content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#sec1.container .content > div > img {
+  height: 90px;
+  margin: 8px 0 0 0;
+  margin: 0.5rem 0 0 0;
+  pointer-events: none;
+  width: 90px;
+}
+
+#sec1.container .content > p {
+  padding: 16px auto;
+  padding: 1rem auto;
+  /* font-family: Roboto; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  text-align: center;
+  color: #262626;
+}
+
+#sec1.container .content > div > a {
+  margin: 16px 0 0 0;
+  margin: 1rem 0 0 0;
+  padding: 10px;
+  width: 48%;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+#sec1.container .content > div > .login {
+  background-color: var(--blue-light-2);
+}
+
+#sec1.container .content > div > .about {
+  background-color: #ffba00;
+}
+
+#sec1.container .content > div > .login:hover,
+#sec1.container .content > div > .about:hover {
+  opacity: 0.7 !important;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+}
+
+/* ======================= ANIMATION ======================= */
+@-webkit-keyframes up-down {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+/* ============================ S1  BACKGROUND ============================ */
+#sec1.container .bg1 {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  display: none;
+}
+
+#sec1.container .bg1:after {
+  content: '';
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncA type="table" tableValues="0 0.7" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: opacity(0.7);
+  filter: opacity(0.7);
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: none;
+}
+
+/* ====================================== SECTION 2 ====================================== */
+#sec2.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* ============================== S2 CONTENT ============================== */
+#sec2.container .content {
+  width: 75%;
+  margin: auto;
+}
+
+.bg-mix-1 {
+  position: relative;
+}
+
+.bg-mix-1 .bg {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.bg-mix-1 .bg img {
+  width: 100%;
+}
+
+/* ====================================== SECTION 3 ====================================== */
+#sec3.container .content {
+  width: 65%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#sec3.container .content .card {
+  width: 209px;
+  height: 209px;
+  margin: 10px;
+  border: 5px solid var(--blue-light-2);
+  position: relative;
+}
+
+#sec3.container .content .card:nth-child(1),
+#sec3.container .content .card:nth-child(2),
+#sec3.container .content .card:nth-child(3) {
+  margin-bottom: 100px;
+}
+
+#sec3.container .content .card .icon {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+#sec3.container .content .card:hover .icon {
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+}
+
+#sec3.container .content .card p {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 30.4px;
+  font-size: 1.9rem;
+}
+
+/* ====================================== SECTION 4 ====================================== */
+.bg-mix {
+  position: relative;
+}
+
+.bg-mix:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg);
+  z-index: -2;
+}
+
+#sec4.container {
+  min-height: auto;
+}
+
+#sec4.container h1.title {
+  margin-bottom: 120px;
+}
+
+/* =============================== S4  CARD =============================== */
+#sec4.container .card-box {
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#sec4.container .card-box .card {
+  color: var(--dark-blue-100);
+  text-decoration: none;
+  width: 30%;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#sec4.container .card-box .card:hover {
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+#sec4.container .card-box .card .img-box {
+  width: 180px;
+  height: 180px;
+  margin: auto auto 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#sec4.container .card-box .card .img-box img {
+  width: 100%;
+}
+
+#sec4.container .card-box .card h3 {
+  font-size: 24px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#sec4.container .card-box .card p {
+  background: var(--yellow);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: 10px auto;
+  box-sizing: border-box;
+  padding: 6px 20px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+/* ====================================== SECTION 5 ====================================== */
+#sec5.container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ============================== S5 CONTENT ============================== */
+#sec5.container .content p.desc {
+  color: var(--grey-80);
+  margin: auto auto 90px;
+  width: 70%;
+}
+
+#sec5.container .content .share-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: auto;
+  width: 55%;
+}
+
+#sec5.container .content .share-container .share {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 60px;
+}
+
+#sec5.container .content .share-container .share.ic-blue:hover svg {
+  fill: var(--facebook);
+}
+
+#sec5.container .content .share-container .share.ic-light-blue:hover svg {
+  fill: var(--teletweet);
+}
+
+#sec5.container .content .share-container .share.ic-green:hover svg {
+  fill: var(--whatsapp);
+}
+
+/* ============================ S5  BACKGROUND ============================ */
+#sec5.container .bg {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateY(5%);
+  transform: translateY(5%);
+  width: 25%;
+  z-index: -1;
+}
+
+#sec5.container .bg img {
+  pointer-events: none;
+  width: 100%;
+}
+
+/* ======================================= MAIN BG ======================================= */
+main {
+  position: relative;
+}
+
+main .bg-outer {
+  position: absolute;
+  z-index: -1;
+}
+
+main .bg-outer img {
+  width: 100%;
+}
+
+main .bg-outer.bg-1 {
+  top: 0;
+  right: 0;
+  width: 15%;
+}
+
+main .bg-outer.bg-2 {
+  top: 10%;
+  left: 0;
+  width: 20%;
+}
+
+main .bg-outer.bg-3 {
+  top: 55%;
+  right: 0;
+  width: 20%;
 }
 
 /* ===================================== RESPONSIVE ===================================== */
 /* ================================= TABLET ================================= */
 @media screen and (max-width: 768px) {
   /* ======================= UNIVERSAL ======================= */
-  .container,
-  #sec4.container {
+  .container {
     padding: 80px 50px 50px;
   }
 
   h1.title {
-    font-size: 3.2rem;
+    font-size: 6rem;
   }
 
   h2.title {
-    width: 75%;
+    font-size: 3rem;
+  }
+
+  /* ======================= SECTION 1 ======================= */
+  #sec1.container .content {
+    width: 60%;
+  }
+
+  #sec1.container .content > p {
+    font-size: 35px;
+  }
+
+  /* ======================= SECTION 2 ======================= */
+  #sec2.container {
+    min-height: auto;
+  }
+
+  /* ======================= SECTION 3 ======================= */
+  #sec3.container .content {
+    width: 80%;
+  }
+
+  /* ======================= SECTION 4 ======================= */
+  #sec4.container .card-box {
+    width: 100%;
+  }
+
+  #sec4.container .card-box .card .img-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  #sec4.container .card-box .card h3 {
+    font-size: 1.2rem;
+  }
+
+  #sec4.container .card-box .card p {
+    font-size: 1.2rem;
+  }
+
+  /* ======================= SECTION 5 ======================= */
+  #sec5.container {
+    min-height: 50vh;
+  }
+
+  #sec5.container .content .share-container .share {
+    width: 35%;
+  }
+
+  #sec5.container .content .share-container .share span {
+    display: none;
+  }
+
+  #sec5.container .bg {
+    width: 45%;
+    bottom: -5%;
+  }
+
+  main .bg-outer.bg-1 {
+    width: 30%;
+  }
+
+  main .bg-outer.bg-2 {
+    width: 35%;
+    top: 20%;
   }
 }
 
 /* ================================= MOBILE ================================= */
 @media screen and (max-width: 426px) {
   /* ======================= UNIVERSAL ======================= */
-  .container,
-  #sec4.container {
-    padding: 80px 35px 50px;
+  .container {
+    padding: 50px 35px 50px;
   }
 
   .button {
@@ -112,16 +589,133 @@ p.desc {
   }
 
   h1.title {
-    font-size: 2.25rem;
+    font-size: 3.5rem;
+    text-align: right;
   }
 
   h2.title {
-    font-size: 1.5rem;
-    padding: 20px 0;
-    width: 100%;
+    font-size: 2rem;
   }
 
   p.desc {
     font-size: 1.125rem;
+  }
+
+  /* ======================= SECTION 1 ======================= */
+  #sec1.container .content {
+    width: 70%;
+  }
+
+  #sec1.container .content > p {
+    font-size: 22px;
+    margin-top: -1rem;
+  }
+
+  #sec1.container .content > div > img {
+    height: 65px;
+    width: 65px;
+    margin: 1rem 0 0 0;
+  }
+
+  #sec1.container > .content > div:nth-child(3) {
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  #sec1.container .content > div > a {
+    width: 92.5%;
+  }
+
+  #sec2.container .content {
+    width: 100%;
+  }
+
+  #sec2.container .content p.desc {
+    text-align: left;
+  }
+
+  #sec3.container .content {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  #sec3.container .content .card {
+    margin-bottom: 50px !important;
+  }
+
+  #sec4.container .card-box {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #sec4.container .card-box .card {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+
+  #sec4.container h1.title {
+    margin-bottom: 60px;
+  }
+
+  #sec4.container .card-box .card:last-child {
+    margin-bottom: 0;
+  }
+
+  #sec4.container .card-box .card h3 {
+    font-size: 1rem;
+  }
+
+  #sec4.container .card-box .card p {
+    font-size: 1rem;
+  }
+
+  /* ======================= SECTION 5 ======================= */
+  #sec5.container {
+    padding-bottom: 150px;
+  }
+
+  #sec5.container .content p.desc {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  #sec5.container .content .share-container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 75%;
+  }
+
+  #sec5.container .content .share-container .share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 53px;
+    width: 35%;
+  }
+
+  #sec5.container .bg {
+    width: 65%;
+    bottom: -5%;
+  }
+
+  main .bg-main.bg-1 {
+    width: 35%;
+    top: 20%;
+  }
+
+  main .bg-main.bg-2 {
+    width: 35%;
+    top: 48%;
   }
 }

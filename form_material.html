@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tulis Materi | Socied</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/Logo.svg"
+      sizes="96x96"
+    />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/form.css" />
+  </head>
+  <body>
+    <!-- =============================== NAVBAR =============================== -->
+    <nav id="nav">
+      <img src="./assets/img/bg/deco_nav.svg" alt="" />
+      <a href="dashboard.html" id="nav-logo" class="logo">
+        <span>Socied</span>
+      </a>
+
+      <div id="show" class="show white"></div>
+      <ul id="nav-ul" class="primary">
+        <div>
+          <li class="search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Cari Sesuatu?"
+            />
+          </li>
+          <li class="nav-items">
+            <a href="./dashboard.html">
+              <svg
+                width="29"
+                height="30"
+                viewBox="0 0 29 30"
+                fill="#262626"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.95216 28.16V23.5734C9.95216 22.4026 10.9082 21.4534 12.0876 21.4534H16.3989C16.9653 21.4534 17.5084 21.6768 17.9089 22.0744C18.3094 22.4719 18.5344 23.0112 18.5344 23.5734V28.16C18.5308 28.6468 18.7231 29.1148 19.0685 29.4603C19.414 29.8057 19.8841 30 20.3744 30H23.3157C24.6894 30.0035 26.0081 29.4642 26.9807 28.5012C27.9534 27.5381 28.5 26.2305 28.5 24.8667V11.8003C28.5 10.6987 28.0081 9.65376 27.1569 8.947L17.151 1.0138C15.4105 -0.377157 12.9167 -0.332247 11.2281 1.12047L1.45052 8.947C0.559111 9.63292 0.0263284 10.6809 0 11.8003V24.8534C0 27.6958 2.32107 30 5.18426 30H8.05843C9.07683 30 9.90449 29.1843 9.91187 28.1733L9.95216 28.16Z"
+                />
+              </svg>
+            </a>
+            <a href="./discover.html">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="#262626"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 0C23.28 0 30 6.72 30 15C30 23.295 23.28 30 15 30C6.705 30 0 23.295 0 15C0 6.72 6.705 0 15 0ZM20.775 10.065C20.94 9.54 20.46 9.045 19.935 9.21L12.255 11.61C11.94 11.715 11.685 11.955 11.595 12.27L9.195 19.965C9.03 20.475 9.525 20.97 10.035 20.805L17.685 18.405C18 18.315 18.255 18.06 18.345 17.745L20.775 10.065Z"
+                />
+              </svg>
+            </a>
+            <a href="./index.html">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="#262626"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.51 0C26.595 0 30 3.57 30 8.88V21.1365C30 26.4315 26.595 30 21.51 30H8.505C3.42 30 0 26.4315 0 21.1365V8.88C0 3.57 3.42 0 8.505 0H21.51ZM14.985 12.7215C14.265 12.7215 13.68 13.32 13.68 14.0415V20.6715C13.68 21.3915 14.265 21.9765 14.985 21.9765C15.72 21.9765 16.305 21.3915 16.305 20.6715V14.0415C16.305 13.32 15.72 12.7215 14.985 12.7215ZM15.015 7.9665C14.28 7.9665 13.695 8.5515 13.695 9.2865C13.695 10.005 14.28 10.5915 14.985 10.5915C15.735 10.5915 16.32 10.005 16.32 9.2865C16.32 8.5515 15.735 7.9665 15.015 7.9665Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="mo-hide">
+            <div class="img-box">
+              <img src="./assets/img/dashboard/atalie/avatar.jpg" />
+            </div>
+            <div class="option">
+              <a href="./myProfile.html" class="button filled blue-light"
+                >Profil</a
+              >
+              <a href="./index.html" class="button red">Logout</a>
+            </div>
+          </li>
+          <li class="pc-hide">
+            <a href="./myProfile.html" class="button filled blue-light"
+              >Profil</a
+            >
+          </li>
+          <li class="pc-hide">
+            <a href="./index.html" class="button red">Logout</a>
+          </li>
+          <div class="bg">
+            <img src="assets/img/bg/deco_bottom_left_1.svg" />
+          </div>
+        </div>
+        <span id="hide" class="hide black">x</span>
+      </ul>
+    </nav>
+
+    <!-- ================================ FORM ================================ -->
+    <section>
+      <div class="box">
+        <div class="top">
+          <a href="dashboard.html">
+            <svg
+              width="38"
+              height="25"
+              viewBox="0 0 38 25"
+              fill="#1FD8D8"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.1738 11.7485L21.177 12.4862C21.177 15.5521 20.9975 18.3473 20.727 20.1694L20.4901 21.3024C20.3583 21.9025 20.185 22.5858 20.0043 22.9346C19.3429 24.2106 18.0498 25 16.6657 25H16.5453C15.643 24.9702 13.7476 24.1784 13.7476 24.1509C10.6976 22.8712 4.81345 19.0089 2.09583 16.2554L1.3061 15.4288C1.0993 15.2047 0.866959 14.9396 0.722718 14.7329C0.240906 14.0949 0 13.3055 0 12.5161C0 11.6348 0.270451 10.8156 0.781809 10.1455L1.59318 9.26985L1.77498 9.08298C4.24086 6.40949 10.6794 2.03782 14.0476 0.699926L14.5561 0.505044C15.168 0.285708 16.0254 0.0240958 16.5453 0C17.2066 0 17.8384 0.153754 18.4407 0.456673C19.1929 0.881219 19.7929 1.55131 20.1248 2.34074C20.3361 2.88691 20.6679 4.52772 20.6679 4.55755C20.9721 6.21196 21.1485 8.82254 21.1738 11.7485ZM37.5 12.5009C37.5 14.2473 36.0977 15.6632 34.3682 15.6632L26.6615 14.9816C25.3047 14.9816 24.2047 13.8709 24.2047 12.5009C24.2047 11.1286 25.3047 10.0202 26.6615 10.0202L34.3682 9.33863C36.0977 9.33863 37.5 10.7545 37.5 12.5009Z"
+              />
+            </svg>
+          </a>
+
+          <h2>Tulis Materi</h2>
+        </div>
+
+        <div class="user">
+          <div class="img-box">
+            <img src="assets/img/dashboard/atalie/avatar.jpg" />
+          </div>
+
+          <h3>Aprilia Atalie Siswantoro</h3>
+        </div>
+
+        <form onsubmit="submitForm(event)">
+          <div>
+            <div class="pic"></div>
+            <div class="upload">
+              <label for="file">Tambah Gambar</label>
+              <input
+                type="file"
+                name="file"
+                id="file"
+                accept="image/png, image/jpeg"
+                required
+              />
+            </div>
+          </div>
+
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Nama Materi"
+            class="title"
+            required
+          />
+
+          <input
+            type="text"
+            name="url"
+            id="url"
+            placeholder="Link website"
+            class="url"
+            required
+          />
+
+          <textarea
+            name="desc"
+            id="desc"
+            cols="30"
+            rows="2"
+            placeholder="Deskripsi materi yang akan dibagikan"
+          ></textarea>
+
+          <button type="submit" class="button filled green">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="bg-outer bg-1">
+      <img src="assets/img/bg/deco_top_right_1.svg" />
+    </div>
+
+    <div class="bg-outer bg-2">
+      <img src="assets/img/bg/deco_bottom_left_1.svg" />
+    </div>
+
+    <script src="assets/js/navbar.js"></script>
+    <script>
+      function submitForm(e) {
+        e.preventDefault();
+
+        window.location.href = 'dashboard.html';
+      }
+    </script>
+  </body>
+</html>

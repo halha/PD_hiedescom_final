@@ -1,32 +1,36 @@
 /* ==================================== INITIAL SETUP ==================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
   --black: #000;
-  --blue: #2d9cdb;
-  --blue-light: #ecfbf9;
-  --blue-dark-100: #252946;
-  --blue-dark-80: #525872;
-  --card-bg: #fffcfc;
-  --grey-20: #c0c8ca;
-  --grey-40: #9aa6a9;
-  --grey-60: #758387;
-  --grey-80: #516064;
-  --grey-100: #2e3c40;
-  --primary-bg: #fafafa;
-  --primary-color: #ee6a51;
-  --red-20: #ffe2e6;
-  --red-100: #ee6a51;
-  --red-dark: #e44c30;
-  --sand-brown-60: #ffdea9;
-  --secondary-bg: #373737;
+  --blue: #0081a7;
+  --blue-light: #f2f7ff;
+  --blue-light-2: #1fd8d8;
+  --blue-focus: #138b8b;
+  --blue-hover: #1ac0c0;
+  --facebook: #1974ec;
+  --green: #b7df69;
+  --green-dark: #a4d04d;
+  --green-focus: #97bb52;
+  --green-hover: #b0d665;
+  --grey: #e9e9e9;
+  --grey-20: #e9e9e9;
+  --grey-40: #a8a8a8;
+  --grey-60: #747474;
+  --grey-80: #262626;
+  --grey-100: #181818;
+  --primary-bg: #f2f7ff;
+  --red: #f07167;
+  --teletweet: #1c9cea;
+  --whatsapp: #29ac00;
   --white: #fff;
   --white-2: #fafafa;
+  --yellow: #ffba00;
 }
 
 * {
   color: var(--grey-100);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -35,45 +39,133 @@
 body {
   background: var(--primary-bg);
   z-index: -5;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.button {
+  border-radius: 100px;
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 12px 4px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.button.red {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.button.blue-light {
+  color: var(--blue-light-2);
+  border: 1px solid var(--blue-light-2);
+}
+
+.button.red:hover {
+  color: var(--white);
+  background: var(--red);
+}
+
+.button.blue-light:hover {
+  color: var(--white);
+  background: var(--blue-light-2);
+}
+
+.button.filled.yellow {
+  color: var(--black);
+  background: var(--yellow);
+}
+
+.button.filled.green {
+  color: var(--black);
+  background: var(--green);
+}
+
+.button.filled.grey {
+  color: var(--white);
+  background: var(--grey-60);
+}
+
+.button.filled.blue {
+  color: var(--black);
+  background: var(--blue);
+}
+
+.button.filled.blue-light {
+  color: var(--black);
+  background: var(--blue-light-2);
+}
+
+.button.filled.red {
+  color: var(--black);
+  background: var(--red);
+}
+
+.button.filled:hover {
+  opacity: 0.8;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
 }
 
 /* ====================================== SCROLLBAR ====================================== */
 body::-webkit-scrollbar {
-  background-color: var(--white-2);
+  background-color: var(--primary-bg);
   width: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
+  background-color: var(--blue-light-2);
 }
 
 /* ===================================== NAVIGATION ===================================== */
 /* ================================ UNIVERSAL ================================ */
 nav {
-  background: var(--primary-bg);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--white);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70px;
+  height: 80px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   left: 0;
-  padding: 15px 100px;
-  position: absolute;
+  padding: 15px 70px;
+  position: fixed;
   top: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 100%;
-  z-index: 99;
+  z-index: 98;
 }
 
 nav.fixed {
   -webkit-animation: show 0.3s;
   animation: show 0.3s;
   position: fixed !important;
+  top: 0;
+}
+
+nav > img {
+  height: 80px;
+  margin-left: -72px;
+  margin-left: -4.5rem;
 }
 
 /* ======================= ANIMATION ======================= */
@@ -124,6 +216,7 @@ nav .logo .logo-icon img {
 }
 
 nav .logo span {
+  font-size: 32px;
   font-size: 2rem;
 }
 
@@ -169,6 +262,17 @@ nav ul div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav ul {
+  width: 90%;
+}
+
+nav ul div {
+  width: 100%;
 }
 
 nav ul div li {
@@ -178,28 +282,118 @@ nav ul div li {
 }
 
 nav ul div li a {
-  color: var(--grey-80);
-  display: inline-block;
-  font-size: 18px;
-  font-size: 1.125rem;
-  padding: 0 5px;
-  position: relative;
   text-decoration: none;
-  text-transform: capitalize;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  font-weight: 500;
+  font-size: 17.6px;
+  font-size: 1.1rem;
 }
 
-nav ul div li a.active {
-  font-weight: 450;
+nav ul div li.search {
+  width: 70%;
+  margin-right: 80px;
 }
 
-nav ul div li a:hover,
-nav ul div li a.active {
-  color: var(--primary-color);
+nav ul div li.search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: var(--primary-bg);
+  box-sizing: border-box;
+  padding: 13px 21px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+nav ul div li.nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav ul div li.nav-items a {
+  margin-right: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav ul div li.nav-items a:hover svg {
+  fill: var(--blue-light-2);
+}
+
+nav ul div li.mo-hide {
+  position: relative;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav ul div li.mo-hide .img-box {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--grey);
+}
+
+nav ul div li.mo-hide .img-box img {
+  width: 100%;
+}
+
+nav ul div li.mo-hide:hover .option {
+  display: block;
+}
+
+nav ul div li.mo-hide .option {
+  position: absolute;
+  bottom: -140px;
+  right: -50px;
+  width: 200px;
+  background: var(--white);
+  box-sizing: border-box;
+  padding: 20px;
+  display: none;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+nav ul div li.mo-hide .option a.button {
+  display: block;
+  width: 100%;
+  padding: 3px 0;
+}
+
+nav ul div li.mo-hide .option a.button.blue-light {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+
+nav ul div li.mo-hide .option a.button.blue-light:hover {
+  opacity: 0.7;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+}
+
+nav ul div li.pc-hide {
+  display: none;
+}
+
+nav ul .bg {
+  display: none;
 }
 
 nav ul .hide {
+  font-size: 40px;
   font-size: 40px;
   font-size: 2.5rem;
 }
@@ -220,8 +414,17 @@ nav ul .hide {
 /* ================================= TABLET ================================= */
 @media screen and (max-width: 768px) {
   /* ======================= UNIVERSAL ======================= */
+  body {
+    width: 100vw;
+  }
+
   nav {
     padding: 10px 50px;
+  }
+
+  nav > img {
+    height: 80px;
+    margin-left: -3.1rem;
   }
 
   /* ========================= LOGO ========================= */
@@ -231,7 +434,8 @@ nav ul .hide {
 
   /* ======================= NAV  ITEM ======================= */
   nav ul {
-    background: var(--sand-brown-60);
+    position: relative;
+    background: var(--white);
     display: block;
     height: 100vh;
     line-height: normal;
@@ -246,26 +450,76 @@ nav ul .hide {
     z-index: 999;
   }
 
-  nav ul.primary {
-    background: var(--sand-brown-60);
+  nav ul .bg {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    z-index: -1;
   }
 
-  nav ul div {
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(-52.5%, -80%);
-    transform: translate(-52.5%, -80%);
+  nav ul .bg img {
     width: 100%;
   }
 
-  nav ul div li {
-    margin-top: 10vh;
+  nav ul.primary {
+    background: var(--white);
+  }
+
+  nav ul > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    width: 100%;
+    /* height: 100vh; */
+    margin-top: 45%;
+  }
+
+  nav ul div li.search {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  nav ul div li.nav-items {
+    width: 60%;
+    margin: 41px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  nav ul div li.mo-hide {
+    display: none;
+  }
+
+  nav ul div li.pc-hide {
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 46px;
+  }
+
+  nav ul div li.pc-hide a.button.blue-light {
+    color: var(--white);
+  }
+
+  nav ul div li.nav-items a {
+    margin-right: 0;
   }
 
   nav ul div li a {
-    font-size: 2rem;
+    margin-left: 0;
   }
 
   nav ul .hide {
@@ -279,6 +533,10 @@ nav ul .hide {
   nav ul .hide {
     display: block;
   }
+
+  nav .show {
+    margin-top: 0;
+  }
 }
 
 /* ================================= MOBILE ================================= */
@@ -286,6 +544,11 @@ nav ul .hide {
   /* ======================= UNIVERSAL ======================= */
   nav {
     padding: 10px 20px;
+  }
+
+  nav > img {
+    height: 80px;
+    margin-left: -1.5rem;
   }
 
   /* ========================= LOGO ========================= */
@@ -307,7 +570,15 @@ nav ul .hide {
   }
 
   /* ======================= NAV  ITEM ======================= */
+  nav ul div li {
+    width: 80% !important;
+  }
+
   nav ul div li a {
     font-size: 2rem;
+  }
+
+  nav ul div li.pc-hide a.button {
+    padding: 6px 30px;
   }
 }
